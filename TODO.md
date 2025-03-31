@@ -8,6 +8,8 @@
 
 ## Use motion to animate sections content on appear
 
+## In `src/app/service/[name]/page.tsx`, show a little description of each possible service, with a list of related video and a placeholder if not videos exist for this
+
 ## Feel free to improve my translation system, by changing the structure of the files containing the translations for example, organizing them per page
 
 ## Tweak a bit my catch phrases to make them attractives for customers.

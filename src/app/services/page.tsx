@@ -4,64 +4,7 @@ import translate from "@/lib/locales/function";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-
-interface Service {
-  key: string;
-  price: number;
-  duration: number | string;
-  img: string;
-}
-
-const servicesData = [
-  {
-    key: "residential",
-    titleKey: "residential_title",
-    descriptionKey: "residential_description",
-    price: 190,
-    duration: 60,
-    img: "/res.avif",
-  },
-  {
-    key: "local-business",
-    titleKey: "local_business_title",
-    descriptionKey: "local_business_description",
-    price: 190,
-    duration: 60,
-    img: "/local-business.jpeg",
-  },
-  {
-    key: "event",
-    titleKey: "event_title",
-    descriptionKey: "event_description",
-    price: 500,
-    duration: "∞",
-    img: "/event.jpeg",
-  },
-  {
-    key: "office",
-    titleKey: "office_title",
-    descriptionKey: "office_description",
-    price: 390,
-    duration: 90,
-    img: "/office.webp",
-  },
-  {
-    key: "hostel",
-    titleKey: "hostel_title",
-    descriptionKey: "hostel_description",
-    price: 390,
-    duration: 90,
-    img: "/hotel.jpeg",
-  },
-  {
-    key: "construction",
-    titleKey: "construction_title",
-    descriptionKey: "construction_description",
-    price: 290,
-    duration: 60,
-    img: "/construction.jpeg",
-  },
-];
+import services from "@/lib/data/services";
 
 const Services = () => {
   return (

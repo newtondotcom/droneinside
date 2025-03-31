@@ -1,5 +1,5 @@
 "use client";
-import links from "@/data/links";
+import links from "@/lib/data/links";
 import translate from "@/lib/locales/function";
 import { cn } from "@/lib/utils";
 import Image from "next/image";

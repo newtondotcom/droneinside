@@ -2,27 +2,9 @@
 import HeroVideoDialog from "@/components/magicui/hero-video-dialog";
 import Title from "@/components/layout/title";
 import translate from "@/lib/locales/function";
-
-interface Video {
-  id: string;
-  descriptionKey: string;
-}
+import videos from "@/data/videos"
 
 export default function Portfolio() {
-  const videos: Video[] = [
-    {
-      id: "KjyyQyEjXqM",
-      descriptionKey: "video1_description",
-    },
-    {
-      id: "DqmoH9LV2Dw",
-      descriptionKey: "video2_description",
-    },
-    {
-      id: "A0knQ9E67bc",
-      descriptionKey: "video3_description",
-    },
-  ];
 
   return (
     <div className="flex flex-col">

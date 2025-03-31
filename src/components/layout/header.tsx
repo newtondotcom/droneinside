@@ -7,7 +7,7 @@ import ThemeToggle from "@/components/layout/color-theme";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
-import links from "@/data/links";
+import links from "@/lib/data/links";
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);

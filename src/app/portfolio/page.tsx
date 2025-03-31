@@ -3,8 +3,18 @@ import HeroVideoDialog from "@/components/magicui/hero-video-dialog";
 import Title from "@/components/layout/title";
 import translate from "@/lib/locales/function";
 
+interface Video {
+  id: string;
+  description: string;
+}
+
+interface Videos {
+  en: Video;
+  fr: Video;
+}
+
 export default function Portfolio() {
-  const videos = [
+  const videos: Videos[] = [
     {
       en: {
         id: "KjyyQyEjXqM",
@@ -43,8 +53,8 @@ export default function Portfolio() {
     },
   ];
 
-  const [language] = "en"; // Assuming you have a way to set language
-
+  let language = "en" as "en" | "fr"; 
+  
   return (
     <div className="flex flex-col">
       <Title

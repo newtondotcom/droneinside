@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 
 interface TypingAnimationProps {
   sentences: string[];
@@ -18,33 +18,32 @@ export default function TypingAnimation({
   const [displayedText, setDisplayedText] = useState("");
   const [isTyping, setIsTyping] = useState(true);
   const [isDeleting, setIsDeleting] = useState(false);
-  const [isPaused, setIsPaused] = useState(false);
+  const [isFinished, setIsFinished] = useState(false); // New state to track completion
 
   useEffect(() => {
-    if (!sentences.length) return;
+    if (!sentences.length || isFinished) return; // Stop if finished
 
     let timeout: NodeJS.Timeout;
     const currentSentence = sentences[currentSentenceIndex];
 
-    if (isTyping && !isPaused) {
+    if (isTyping) {
       if (displayedText.length < currentSentence.length) {
-        // Still typing the current sentence
+        // Typing the current sentence
         timeout = setTimeout(() => {
           setDisplayedText(
             currentSentence.substring(0, displayedText.length + 1),
           );
         }, typingSpeed);
       } else {
-        // Finished typing, pause before deleting or moving to next sentence
-        setIsTyping(false);
+        // Finished typing, pause before deleting (unless it's the last sentence)
         timeout = setTimeout(() => {
           if (currentSentenceIndex < sentences.length - 1) {
+            setIsTyping(false);
             setIsDeleting(true);
           } else {
-            // If it's the last sentence, keep it displayed
-            setIsPaused(true);
+            setIsFinished(true); // Freeze on the last sentence
           }
-        }, delayBetweenSentences * 2);
+        }, delayBetweenSentences);
       }
     } else if (isDeleting) {
       if (displayedText.length > 0) {
@@ -58,20 +57,20 @@ export default function TypingAnimation({
         // Finished deleting, move to next sentence
         setIsDeleting(false);
         setIsTyping(true);
-        setCurrentSentenceIndex((prev) => (prev + 1) % sentences.length);
+        setCurrentSentenceIndex((prev) => prev + 1);
       }
     }
 
     return () => clearTimeout(timeout);
   }, [
-    sentences,
-    currentSentenceIndex,
     displayedText,
     isTyping,
     isDeleting,
-    isPaused,
+    currentSentenceIndex,
+    sentences,
     typingSpeed,
     delayBetweenSentences,
+    isFinished,
   ]);
 
   return (
@@ -84,11 +83,13 @@ export default function TypingAnimation({
       >
         <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-primary">
           {displayedText}
-          <motion.span
-            animate={{ opacity: [0, 1, 0] }}
-            transition={{ repeat: Number.POSITIVE_INFINITY, duration: 0.8 }}
-            className="inline-block w-1 h-8 md:h-12 bg-primary ml-1 align-middle"
-          />
+          {!isFinished && ( // Only show blinking cursor if not finished
+            <motion.span
+              animate={{ opacity: [0, 1, 0] }}
+              transition={{ repeat: Infinity, duration: 0.8 }}
+              className="inline-block w-1 h-8 md:h-12 bg-primary ml-1 align-middle"
+            />
+          )}
         </h1>
       </motion.div>
     </div>

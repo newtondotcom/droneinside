@@ -3,7 +3,6 @@ import Title from "@/components/layout/title";
 import translate from "@/lib/locales/function";
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useState } from "react";
 import services from "@/lib/data/services";
 
 const Services = () => {
@@ -19,8 +18,12 @@ const Services = () => {
           <Link key={service.key} href="/contact">
             <div className="border rounded-lg shadow-lg overflow-hidden h-full">
               <div className="p-4 text-left">
-                <h2 className="text-lg font-semibold">{translate(service.key + "_title")}</h2>
-                <p className="text-gray-600">{translate(service.key + "_description")}</p>
+                <h2 className="text-lg font-semibold">
+                  {translate(service.key + "_title")}
+                </h2>
+                <p className="text-gray-600">
+                  {translate(service.key + "_description")}
+                </p>
               </div>
               <div>
                 <Image

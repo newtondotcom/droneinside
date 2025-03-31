@@ -2,10 +2,9 @@
 import HeroVideoDialog from "@/components/magicui/hero-video-dialog";
 import Title from "@/components/layout/title";
 import translate from "@/lib/locales/function";
-import videos from "@/data/videos"
+import videos from "@/lib/data/videos";
 
 export default function Portfolio() {
-
   return (
     <div className="flex flex-col">
       <Title

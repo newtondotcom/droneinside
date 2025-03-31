@@ -1,7 +1,20 @@
-import { useEffect, useState } from 'react';
+"use client";
+import {
+  Accordion,
+  AccordionItem,
+  AccordionTrigger,
+  AccordionContent,
+} from "@/components/ui/accordion";
+import translate from "@/lib/locales/function";
+import { useEffect, useState } from "react";
 
 export default function FAQ() {
-  const [faqList, setFaqList] = useState([]);
+  const [faqList, setFaqList] = useState([
+    {
+      question: "",
+      answer: "",
+    },
+  ]);
 
   useEffect(() => {
     const questionsCount = 9;

@@ -8,6 +8,8 @@ import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import links from "@/lib/data/links";
+import Image from "next/image";
+import translate from "@/lib/locales/function";
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -27,7 +29,11 @@ export default function Header() {
         )}
       >
         <Link className="flex items-center gap-2" href="/">
-          <Image src="/logo.jpg" className="h-8 w-auto sm:h-10" alt="DronInside" />
+          <Image
+            src="/logo.jpg"
+            className="h-8 w-auto sm:h-10"
+            alt="DronInside"
+          />
         </Link>
 
         <nav

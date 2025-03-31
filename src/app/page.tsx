@@ -1,9 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useRouter } from "next/navigation";
 import translate from "@/lib/locales/function";
-import { Button } from "@/components/ui/button";
 import HeroVideoDialog from "@/components/magicui/hero-video-dialog";
 import { Separator } from "@/components/ui/separator";
 import { Spotlight } from "@/components/ui/spotlight-new";
@@ -11,7 +9,6 @@ import GridBackground from "@/components/ui/grid-bg";
 import Link from "next/link";
 
 export default function Home() {
-  const router = useRouter();
   const videoId = "TTYi8xfwReI";
   return (
     <>
@@ -44,10 +41,7 @@ export default function Home() {
                 {translate("video_text")}
               </p>
               <div className="mt-4 md:mt-8">
-                <Link
-                  href={"/contact"}
-                  className="font-semibold"
-                >
+                <Link href={"/contact"} className="font-semibold">
                   {translate("get_started")}
                 </Link>
               </div>

@@ -1,18 +1,13 @@
 import translations from "@/lib/locales/trad";
 
-// Define the type for the translations object
-interface Translations {
-  [locale: string]: {
-    [key: string]: string;
-  };
-}
+export default function translate(key: string): string {
+  const browserLanguage = navigator.language?.toString().split("-")[0] || "en";
+  let locale: string = "en";
 
-export default function translate(key: keyof Translations[string]): string {
-  let locale: string = navigator.language?.split("-")[0] || "en";
-  
-  if (!translations[locale]) {
-    locale = "en"; // fallback to English if the locale is not found
+  if (browserLanguage && translations.hasOwnProperty(browserLanguage)) {
+    locale = browserLanguage;
   }
 
-  return translations[locale][key] || key; // return key if translation doesn't exist
+  // @ts-expect-error  (Ignore potential "no index signature" errors)
+  return translations[locale][key] || key;
 }

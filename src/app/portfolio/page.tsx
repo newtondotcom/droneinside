@@ -44,7 +44,7 @@ export default function Portfolio() {
     },
   ];
 
-  const [language, setLanguage] = useState<"en" | "fr">("en"); // Assuming you have a way to set language
+  const [language] = "en"; // Assuming you have a way to set language
 
   return (
     <div className="flex flex-col">

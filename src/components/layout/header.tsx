@@ -27,7 +27,7 @@ export default function Header() {
         )}
       >
         <Link className="flex items-center gap-2" href="/">
-          <span className="font-bold text-2xl">DronInside</span>
+          <Image src="/logo.jpg" className="h-8 w-auto sm:h-10" alt="DronInside" />
         </Link>
 
         <nav

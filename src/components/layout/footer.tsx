@@ -1,7 +1,8 @@
 "use client";
-import links from "@/data/links";
+import links from "@/lib/data/links";
 import translate from "@/lib/locales/function";
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -11,7 +12,7 @@ const Footer = () => {
     <footer className="flex">
       <div className="mx-auto max-w-5xl mt-4 px-4 py-16 sm:px-6 lg:px-8">
         <div className="flex justify-center">
-          <img className="h-8 w-auto sm:h-10" src="/logo.jpg" alt="Logo" />
+          <Image className="h-8 w-auto sm:h-10" src="/logo.jpg" alt="Logo" />
         </div>
 
         <p className="mx-auto mt-6 max-w-md text-center leading-relaxed text-gray-500">
@@ -19,8 +20,8 @@ const Footer = () => {
         </p>
 
         <ul className="mt-12 flex flex-wrap justify-center gap-6 md:gap-8 lg:gap-12">
-          {links.map(({ path, label }) => (
-            <li key={path}>
+          {links.map(({ path, key }) => (
+            <li key={key}>
               <Link href="path">
                 <button
                   className={cn(
@@ -28,7 +29,7 @@ const Footer = () => {
                     pathname === path ? "text-primary/60" : "",
                   )}
                 >
-                  {translate(label)}
+                  {translate(key)}
                 </button>
               </Link>
             </li>

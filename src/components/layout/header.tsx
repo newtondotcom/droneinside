@@ -7,7 +7,7 @@ import ThemeToggle from "@/components/layout/color-theme";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
-import links from "@/data/links";
+import links from "@/lib/data/links";
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -27,23 +27,23 @@ export default function Header() {
         )}
       >
         <Link className="flex items-center gap-2" href="/">
-          <span className="font-bold text-2xl">DronInside</span>
+          <Image src="/logo.jpg" className="h-8 w-auto sm:h-10" alt="DronInside" />
         </Link>
 
         <nav
           className="hidden md:flex gap-4 sm:gap-6"
           aria-label="Main navigation"
         >
-          {links.map(({ path, label }) => (
+          {links.map(({ path, key }) => (
             <Link
-              key={path}
+              key={key}
               href={path}
               className={cn(
                 "text-sm font-medium hover:underline underline-offset-4",
                 pathname === path && "text-primary font-semibold",
               )}
             >
-              {label.charAt(0).toUpperCase() + label.slice(1)}
+              {translate(key)}
             </Link>
           ))}
         </nav>
@@ -72,14 +72,14 @@ export default function Header() {
           className="fixed top-16 left-0 w-full md:hidden flex flex-col gap-4 p-4 border-b bg-white shadow-md dark:bg-background dark:border-border"
           aria-label="Mobile navigation"
         >
-          {links.map(({ path, label }) => (
+          {links.map(({ path, key }) => (
             <Link
-              key={path}
+              key={key}
               href={path}
               className="text-sm font-medium hover:underline underline-offset-4"
               onClick={toggleMobileMenu}
             >
-              {label.charAt(0).toUpperCase() + label.slice(1)}
+              {translate(key)}
             </Link>
           ))}
         </nav>

@@ -1,5 +1,4 @@
 "use client";
-import { useState } from "react";
 import HeroVideoDialog from "@/components/magicui/hero-video-dialog";
 import Title from "@/components/layout/title";
 import translate from "@/lib/locales/function";

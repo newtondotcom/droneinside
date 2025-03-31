@@ -10,12 +10,10 @@
 
 ## Feel free to improve my translation system, by changing the structure of the files containing the translations for example, organizing them per page
 
-## Translate the links array located in `src/data/links.ts` in french and english like all the other words
-
 ## Tweak a bit my catch phrases to make them attractives for customers.
 
 ## Improve SEO and accessibility
 
 ## Make sure dark/white theme are operationnal
 
-## Traduis la page `not-found.tsx`
+## Translate the `not-found.tsx` page

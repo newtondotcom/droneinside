@@ -1,8 +1,8 @@
 const links = [
-  { path: "/", label: "home" },
-  { path: "/services", label: "services" },
-  { path: "/portfolio", label: "portfolio" },
-  { path: "/faq", label: "faq" },
+  { path: "/", key: "home" },
+  { path: "/services", key: "services" },
+  { path: "/portfolio", key: "portfolio" },
+  { path: "/faq", key: "faq" },
 ];
 
 export default links;

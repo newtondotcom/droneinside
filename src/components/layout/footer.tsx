@@ -20,8 +20,8 @@ const Footer = () => {
         </p>
 
         <ul className="mt-12 flex flex-wrap justify-center gap-6 md:gap-8 lg:gap-12">
-          {links.map(({ path, label }) => (
-            <li key={path}>
+          {links.map(({ path, key }) => (
+            <li key={key}>
               <Link href="path">
                 <button
                   className={cn(
@@ -29,7 +29,7 @@ const Footer = () => {
                     pathname === path ? "text-primary/60" : "",
                   )}
                 >
-                  {translate(label)}
+                  {translate(key)}
                 </button>
               </Link>
             </li>

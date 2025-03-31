@@ -9,7 +9,18 @@ import {
 } from "@/components/ui/accordion";
 import translate from "@/lib/locales/function";
 
-const questions = [
+
+interface Question {
+  question: string;
+  answer: string;
+}
+
+interface Questions {
+  en: Question;
+  fr: Question;
+}
+
+const questions: Questions[] = [
   {
     en: {
       question:
@@ -122,11 +133,12 @@ const questions = [
     },
   },
 ];
-export default function FAQ() {
-  const [faqList, setFaqList] = useState([]);
+
+export default function FAQ () {
+  const [faqList, setFaqList] = useState<Question[]>([]);
 
   useEffect(() => {
-    let lang = navigator.language.split("-")[0];
+    let lang = navigator.language.split("-")[0] as "en" | "fr";
     if (lang !== "fr" && lang !== "en") lang = "en";
     setFaqList(questions.map((q) => q[lang]));
   }, []);

@@ -1,6 +1,7 @@
 "use client";
 import Title from "@/components/layout/title";
 import translate from "@/lib/locales/function";
+import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
@@ -112,7 +113,7 @@ const Services = () => {
   const [services, setServices] = useState<Service[]>([]);
 
   useEffect(() => {
-    let lang = navigator.language.split("-")[0];
+    let lang = navigator.language.split("-")[0] as "en" | "fr";
     if (lang !== "fr" && lang !== "en") lang = "en";
 
     setServices(
@@ -143,7 +144,7 @@ const Services = () => {
                 <p className="text-gray-600">{service.description}</p>
               </div>
               <div>
-                <img
+                <Image
                   alt={service.title}
                   src={service.img}
                   className="h-56 w-full object-cover"

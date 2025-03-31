@@ -2,6 +2,7 @@
 import links from "@/data/links";
 import translate from "@/lib/locales/function";
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -11,7 +12,7 @@ const Footer = () => {
     <footer className="flex">
       <div className="mx-auto max-w-5xl mt-4 px-4 py-16 sm:px-6 lg:px-8">
         <div className="flex justify-center">
-          <img className="h-8 w-auto sm:h-10" src="/logo.jpg" alt="Logo" />
+          <Image className="h-8 w-auto sm:h-10" src="/logo.jpg" alt="Logo" />
         </div>
 
         <p className="mx-auto mt-6 max-w-md text-center leading-relaxed text-gray-500">

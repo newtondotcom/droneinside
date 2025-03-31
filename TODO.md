@@ -6,7 +6,7 @@
 
 ## Use motion to animate sections content on appear
 
-## Feel free to improve my translation system, by changing the structure of the files containing the translations for example.
+## Feel free to improve my translation system, by changing the structure of the files containing the translations for example, organizing them per page
 
 ## Translate the links array located in `src/data/links.ts` in french and english like all the other words
 

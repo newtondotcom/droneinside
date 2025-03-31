@@ -13,7 +13,7 @@
 - de l'extérieur à l'aide de la photogrammétrie (applicable pour tous les services sauf les evenemetns et les appartements)
 - l'intérieur pour les logements à l'aide de la technologie LIDAR pour l'afficher sur un site web, ou faire des mesures, ou prévoir la disposition des meubles. 
 
-## Partie dédiée pour les biens immobliiers
+## Dans la landing page, Partie dédiée pour les biens immobilliers : (trouvez un moyen de faire un modal quand l'utilisateur clique sur un bouton voyant ?)
 Démarquez vous :
 - perspectives uniques
 - plan au sol > calculs automatique
@@ -31,6 +31,14 @@ Démarquez vous :
 
 ## Make sure dark/white theme are operationnal
 
+## Create a contact page using server action located in `/src/lib/actions/discord.ts`, using zod 
+
 ## Translate the `not-found.tsx` page
 
 ## Use simpleicons.org for footer icons, add link for BluSky also
+
+## Créer la page type d'une annonce immobilière 
+- Photos
+- Plan 2d interactif avec des chiffres
+- Modèle 3D interactif de l'extérieur
+- Description

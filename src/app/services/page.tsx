@@ -29,7 +29,9 @@ const Services = () => {
                 <Image
                   alt={service.key + "_title"}
                   src={service.img}
-                  className="h-56 w-full object-cover"
+                  className="w-full object-cover"
+                  height={896}
+                  width={600}
                 />
               </div>
               <div className="p-4 flex justify-between text-xs text-gray-600">

@@ -19,14 +19,14 @@ export default function Portfolio() {
                 className="block dark:hidden"
                 animationStyle="from-center"
                 videoSrc={`https://www.youtube.com/embed/${video.id}`}
-                thumbnailSrc="https://startup-template-sage.vercel.app/hero-light.png"
+                thumbnailSrc="/construction.jpeg"
                 thumbnailAlt="Hero Video"
               />
               <HeroVideoDialog
                 className="hidden dark:block"
                 animationStyle="from-center"
                 videoSrc={`https://www.youtube.com/embed/${video.id}`}
-                thumbnailSrc="https://startup-template-sage.vercel.app/hero-dark.png"
+                thumbnailSrc="/construction.jpeg"
                 thumbnailAlt="Hero Video"
               />
             </div>

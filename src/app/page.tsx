@@ -49,7 +49,7 @@ export default function Home() {
           </div>
           <div className="hidden w-1/2 md:block">
             <Image
-              src="/tranche.jpg"
+              src="/construction.jpeg"
               width={800}
               height={600}
               alt="header"
@@ -59,31 +59,31 @@ export default function Home() {
         </div>
       </section>
 
-      <Separator />
+      <Separator className="hidden dark:block" />
 
       <GridBackground>
         <div className="mb-2 flex self-center bg-gradient-to-b from-primary to-primary-light bg-clip-text text-center text-4xl font-bold text-transparent md:text-7xl">
           Showreel
         </div>
-        <div className="relative">
+        <div className="relative w-full">
           <HeroVideoDialog
             className="block dark:hidden"
             animationStyle="from-center"
             videoSrc={`https://www.youtube.com/embed/${videoId}`}
-            thumbnailSrc="https://startup-template-sage.vercel.app/hero-light.png"
+            thumbnailSrc="/construction.jpeg"
             thumbnailAlt="Hero Video"
           />
           <HeroVideoDialog
             className="hidden dark:block"
             animationStyle="from-center"
             videoSrc={`https://www.youtube.com/embed/${videoId}`}
-            thumbnailSrc="https://startup-template-sage.vercel.app/hero-dark.png"
+            thumbnailSrc="/construction.jpeg"
             thumbnailAlt="Hero Video"
           />
         </div>
       </GridBackground>
 
-      <Separator className="hidden dark:block" />
+      <Separator />
 
       <div className="relative flex h-[25rem] w-full flex-col overflow-hidden rounded-md bg-white/[0.96] dark:bg-black/[0.96] md:h-[40rem] md:items-center md:justify-center">
         <Spotlight />

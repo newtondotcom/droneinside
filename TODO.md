@@ -6,7 +6,7 @@
 
 ## In the first section make a writing somewhere saying that we are not only doing inside fly.
 
-## Use motion to animate sections content on appear
+## Use motion to animate sections content on appear, be creative 
 
 ## In `src/app/service/[name]/page.tsx`, show a little description of each possible service, with a list of related video and a placeholder if not videos exist for this
 
@@ -19,3 +19,5 @@
 ## Make sure dark/white theme are operationnal
 
 ## Translate the `not-found.tsx` page
+
+## Use simpleicons.org for footer icons, add link for BluSky also

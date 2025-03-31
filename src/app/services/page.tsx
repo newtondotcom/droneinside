@@ -7,8 +7,6 @@ import { useEffect, useState } from "react";
 
 interface Service {
   key: string;
-  title: string;
-  description: string;
   price: number;
   duration: number | string;
   img: string;
@@ -17,92 +15,48 @@ interface Service {
 const servicesData = [
   {
     key: "residential",
-    en: {
-      title: "Residential",
-      description:
-        "Take advantage of a competitive edge to sell your residential listings faster!",
-    },
-    fr: {
-      title: "Lieux résidentiels",
-      description:
-        "Profitez d'un avantage concurrentiel pour vendre vos annonces résidentielles plus rapidement !",
-    },
+    titleKey: "residential_title",
+    descriptionKey: "residential_description",
     price: 190,
     duration: 60,
     img: "/res.avif",
   },
   {
     key: "local-business",
-    en: {
-      title: "Local Business",
-      description: "Highlight your business with a video for social media!",
-    },
-    fr: {
-      title: "Entreprises Locales",
-      description:
-        "Mettez en valeur votre commerce avec une vidéo à destination des réseaux sociaux !",
-    },
+    titleKey: "local_business_title",
+    descriptionKey: "local_business_description",
     price: 190,
     duration: 60,
     img: "/local-business.jpeg",
   },
   {
     key: "event",
-    en: {
-      title: "Events",
-      description: "Let us cover your event from a unique perspective!",
-    },
-    fr: {
-      title: "Evenementiel",
-      description:
-        "Laissez nous couvrir votre évènement sous un angle inédit !",
-    },
+    titleKey: "event_title",
+    descriptionKey: "event_description",
     price: 500,
     duration: "∞",
     img: "/event.jpeg",
   },
   {
     key: "office",
-    en: {
-      title: "Office",
-      description: "Promote your workspaces / coworking with a custom video!",
-    },
-    fr: {
-      title: "Bureaux",
-      description:
-        "Faites la promotion de vos espaces de travail / coworking  avec une vidéo sur mesure !",
-    },
+    titleKey: "office_title",
+    descriptionKey: "office_description",
     price: 390,
     duration: 90,
     img: "/office.webp",
   },
   {
     key: "hostel",
-    en: {
-      title: "Hostel",
-      description: "Showcase your hotel complex with an immersive video!",
-    },
-    fr: {
-      title: "Hôtels et hébergements locatifs",
-      description:
-        "Faites découvrir votre complexe hôtellier à travers une vidéo immersive !",
-    },
+    titleKey: "hostel_title",
+    descriptionKey: "hostel_description",
     price: 390,
     duration: 90,
     img: "/hotel.jpeg",
   },
   {
     key: "construction",
-    en: {
-      title: "Construction",
-      description:
-        "Capture and share the progress of your construction projects like never before!",
-    },
-    fr: {
-      title: "Site de constructions",
-      description:
-        "Capturez et partagez l'avancement de vos projets de construction comme jamais auparavant !",
-    },
+    titleKey: "construction_title",
+    descriptionKey: "construction_description",
     price: 290,
     duration: 60,
     img: "/construction.jpeg",
@@ -110,24 +64,6 @@ const servicesData = [
 ];
 
 const Services = () => {
-  const [services, setServices] = useState<Service[]>([]);
-
-  useEffect(() => {
-    let lang = navigator.language.split("-")[0] as "en" | "fr";
-    if (lang !== "fr" && lang !== "en") lang = "en";
-
-    setServices(
-      servicesData.map((service) => ({
-        title: service[lang].title,
-        description: service[lang].description,
-        price: service.price,
-        duration: service.duration,
-        img: service.img,
-        key: service.key,
-      })),
-    );
-  }, []);
-
   return (
     <div className="flex flex-col">
       <Title
@@ -140,12 +76,12 @@ const Services = () => {
           <Link key={service.key} href="/contact">
             <div className="border rounded-lg shadow-lg overflow-hidden h-full">
               <div className="p-4 text-left">
-                <h2 className="text-lg font-semibold">{service.title}</h2>
-                <p className="text-gray-600">{service.description}</p>
+                <h2 className="text-lg font-semibold">{translate(service.key + "_title")}</h2>
+                <p className="text-gray-600">{translate(service.key + "_description")}</p>
               </div>
               <div>
                 <Image
-                  alt={service.title}
+                  alt={service.key + "_title"}
                   src={service.img}
                   className="h-56 w-full object-cover"
                 />

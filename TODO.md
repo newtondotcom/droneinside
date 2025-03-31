@@ -1,10 +1,21 @@
 # Prompt
 
-## Create multiples sections on landing page, make them to use full screen height and use scroll snap option
+> Make on commit per point
+
+## Create multiples sections from the landing page, make them to use full screen height and use scroll snap option
+
 ## Use motion to animate sections content on appear
-## Translate the links array in french and english like all the other words
-## Feel free to improve my translation systel
-## For faq page, services, and portfolio, put the translations into dedicated ts file in src/lib/locales/
+
+## Feel free to improve my translation system, by changing the structure of the files containing the translations for example.
+
+## Translate the links array located in `src/data/links.ts` in french and english like all the other words
+
+## For faq page, services, and portfolio, put the translations into appropriate ts file in src/lib/locales/
+
+## Tweak a bit my cath phrases to make them attractives for customers.
+
 ## Improve SEO and accessibility
+
 ## Make sure dark/white theme are operationnal
-## Change the Shadnc main color to a beautiful marine blue.
+
+## Traduis la page `not-found.tsx`

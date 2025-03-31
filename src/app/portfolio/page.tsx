@@ -53,7 +53,7 @@ export default function Portfolio() {
     },
   ];
 
-  let language = "en" as "en" | "fr"; 
+  const language = "en" as "en" | "fr"; 
   
   return (
     <div className="flex flex-col">

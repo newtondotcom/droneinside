@@ -7,9 +7,6 @@ interface Translations {
   };
 }
 
-// Ensure the translations are of the correct type
-const translations: Translations = require('@/lib/locales/trad').default;
-
 export default function translate(key: keyof Translations[string]): string {
   let locale: string = navigator.language?.split("-")[0] || "en";
   

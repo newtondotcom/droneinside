@@ -50,38 +50,73 @@ const translations = {
     choose_service: "Choose a service",
     discover_services: "Discover the services we are offering by clicking ",
     discover_here: "here",
-    q1_question: "What are the advantages of a drone tour compared to a regular video tour?",
-    q1_answer: "Drone video tours, filmed entirely in one take, provide viewers with a much better understanding of a property's layout and size compared to standard videos. Additionally, we can capture camera angles that would otherwise be impossible.",
+    q1_question:
+      "What are the advantages of a drone tour compared to a regular video tour?",
+    q1_answer:
+      "Drone video tours, filmed entirely in one take, provide viewers with a much better understanding of a property's layout and size compared to standard videos. Additionally, we can capture camera angles that would otherwise be impossible.",
     q2_question: "What types of properties do you film?",
-    q2_answer: "We film a wide range of properties, including residential real estate, small businesses, venues, and corporate office buildings. No project is too small or too large.",
+    q2_answer:
+      "We film a wide range of properties, including residential real estate, small businesses, venues, and corporate office buildings. No project is too small or too large.",
     q3_question: "How long does it take to film?",
-    q3_answer: "Residential drone tours typically take about 30 to 60 minutes to film.",
+    q3_answer:
+      "Residential drone tours typically take about 30 to 60 minutes to film.",
     q4_question: "What is the lead time to schedule my flight?",
-    q4_answer: "You can usually schedule your commercial flight within 7 days, and your residential flight within 2 days.",
+    q4_answer:
+      "You can usually schedule your commercial flight within 7 days, and your residential flight within 2 days.",
     q5_question: "How does a service proceed?",
-    q5_answer: "During a service, the following steps are followed in order: the location is explored, an initial video capture trajectory is established according to your preferences, the first flight provides a preview of the video, additional flights are conducted until a satisfactory result is achieved. The drone has a flight autonomy of 40 minutes, distributed over 3 batteries, which is sufficient for multiple retakes if necessary.",
+    q5_answer:
+      "During a service, the following steps are followed in order: the location is explored, an initial video capture trajectory is established according to your preferences, the first flight provides a preview of the video, additional flights are conducted until a satisfactory result is achieved. The drone has a flight autonomy of 40 minutes, distributed over 3 batteries, which is sufficient for multiple retakes if necessary.",
     q6_question: "What is the turnaround time for a drone tour?",
-    q6_answer: "Most drone tour videos are delivered within 24 hours. Turnaround times for other drone tour videos are typically within 72 hours but may vary depending on the project.",
+    q6_answer:
+      "Most drone tour videos are delivered within 24 hours. Turnaround times for other drone tour videos are typically within 72 hours but may vary depending on the project.",
     q7_question: "What are the rates?",
-    q7_answer: "Rates are determined based on the service duration, the number of places to film, and the complexity of the shots to be taken. For a personalized quote, please contact us. Indicative prices are available on the Services page.",
+    q7_answer:
+      "Rates are determined based on the service duration, the number of places to film, and the complexity of the shots to be taken. For a personalized quote, please contact us. Indicative prices are available on the Services page.",
     q8_question: "Are there safety concerns when flying a drone indoors?",
-    q8_answer: "We use drones that are specially designed and calibrated for slow indoor flight. They are equipped with ducts around the propellers, making them extremely safe for indoor use.",
+    q8_answer:
+      "We use drones that are specially designed and calibrated for slow indoor flight. They are equipped with ducts around the propellers, making them extremely safe for indoor use.",
     q9_question: "Where are we located?",
-    q9_answer: "We can provide services in the Paris region or around Toulouse. For services outside these areas, please contact us. Travel expenses may apply.",
-    video1_description: "A lively virtual tour of a seaside house. These lively videos can be created for private properties of any kind.",
-    video2_description: "A house of over 200 square meters in the middle of the forest. Drone real estate tours provide a better sense of space compared to traditional tours.",
-    video3_description: "Discover the beauty of the Southern France with this video.",    residential_title: "Residential",
-    residential_description: "Take advantage of a competitive edge to sell your residential listings faster!",
+    q9_answer:
+      "We can provide services in the Paris region or around Toulouse. For services outside these areas, please contact us. Travel expenses may apply.",
+    video1_description:
+      "A lively virtual tour of a seaside house. These lively videos can be created for private properties of any kind.",
+    video2_description:
+      "A house of over 200 square meters in the middle of the forest. Drone real estate tours provide a better sense of space compared to traditional tours.",
+    video3_description:
+      "Discover the beauty of the Southern France with this video.",
+    residential_title: "Residential",
+    residential_description:
+      "Take advantage of a competitive edge to sell your residential listings faster!",
     local_business_title: "Local Business",
-    local_business_description: "Highlight your business with a video for social media!",
+    local_business_description:
+      "Highlight your business with a video for social media!",
     event_title: "Events",
     event_description: "Let us cover your event from a unique perspective!",
     office_title: "Office",
-    office_description: "Promote your workspaces / coworking with a custom video!",
+    office_description:
+      "Promote your workspaces / coworking with a custom video!",
     hostel_title: "Hostel",
     hostel_description: "Showcase your hotel complex with an immersive video!",
     construction_title: "Construction",
-    construction_description: "Capture and share the progress of your construction projects like never before!",
+    construction_description:
+      "Capture and share the progress of your construction projects like never before!",
+    aerial_3d_title: "Beyond Indoor Flights: Aerial Photography & 3D Modeling",
+    aerial_3d_subtitle:
+      "We don't just fly indoors. Discover our complete range of drone services including stunning aerial photography and advanced 3D modeling solutions.",
+
+    aerial_photography_title: "Aerial Photography",
+    aerial_photography_description:
+      "Capture breathtaking aerial views of your property or location with our professional outdoor drone services. Perfect for showcasing landscapes, buildings, and properties from unique perspectives that ground-based photography simply cannot achieve.",
+
+    exterior_3d_title: "Exterior 3D Models",
+    exterior_3d_description:
+      "Using advanced photogrammetry techniques, we can create detailed 3D models of building exteriors, construction sites, and landscapes. These models provide accurate measurements, visualization capabilities, and can be embedded on your website for interactive viewing.",
+
+    interior_3d_title: "Interior LIDAR Scanning",
+    interior_3d_description:
+      "Our cutting-edge LIDAR technology creates precise 3D models of interior spaces. These models can be used for virtual tours, accurate measurements, furniture placement planning, and renovation visualization. Perfect for real estate, architecture, and interior design.",
+
+    learn_more_cta: "Learn More About Our 3D Services",
   },
   fr: {
     header_company_name: "DronInside",
@@ -135,38 +170,78 @@ const translations = {
     choose_service: "Choisissez un service",
     discover_services: "Découvrez les services que nous proposons en cliquant ",
     discover_here: "ici !",
-    q1_question: "Quels sont les avantages d'une visite en drone par rapport à une visite vidéo classique ?",
-    q1_answer: "Les visites vidéo en drone, entièrement filmées en une seule prise, offrent aux spectateurs une bien meilleure perception de la disposition et de la taille d'une propriété par rapport aux vidéos standard. De plus, nous pouvons capturer des angles de caméra qui seraient autrement impossibles.",
+    q1_question:
+      "Quels sont les avantages d'une visite en drone par rapport à une visite vidéo classique ?",
+    q1_answer:
+      "Les visites vidéo en drone, entièrement filmées en une seule prise, offrent aux spectateurs une bien meilleure perception de la disposition et de la taille d'une propriété par rapport aux vidéos standard. De plus, nous pouvons capturer des angles de caméra qui seraient autrement impossibles.",
     q2_question: "Quels types de propriétés filmez-vous ?",
-    q2_answer: "Nous filmons divers types de propriétés, qu'il s'agisse de biens immobiliers résidentiels, de petites entreprises, de lieux événementiels ou d'immeubles de bureaux d'entreprise. Aucun projet n'est trop petit ni trop grand.",
+    q2_answer:
+      "Nous filmons divers types de propriétés, qu'il s'agisse de biens immobiliers résidentiels, de petites entreprises, de lieux événementiels ou d'immeubles de bureaux d'entreprise. Aucun projet n'est trop petit ni trop grand.",
     q3_question: "Combien de temps faut-il pour filmer ?",
-    q3_answer: "Les tournages de visite imbolière prennent généralement entre 30 et 60 minutes.",
+    q3_answer:
+      "Les tournages de visite imbolière prennent généralement entre 30 et 60 minutes.",
     q4_question: "Quel est le délai de préavis pour planifier mon vol ?",
-    q4_answer: "Vous pouvez planifier votre vol jusqu'à 7 jours avant la date pour un vol et votre vol résidentiel jusqu'à 2 jours avant.",
+    q4_answer:
+      "Vous pouvez planifier votre vol jusqu'à 7 jours avant la date pour un vol et votre vol résidentiel jusqu'à 2 jours avant.",
     q5_question: "Comment se déroule une prestation ?",
-    q5_answer: "Pendant une prestation, les étapes suivantes sont suivies dans l'ordre : parcours des lieux, établissement d'une trajectoire de capture vidéo initiale en fonction de vos préférences, le premier vol offre un aperçu de la vidéo, des vols supplémentaires sont effectués jusqu'à l'obtention d'un résultat satisfaisant. Le drone a une autonomie de vol de 40 minutes, répartie sur 3 batteries, ce qui permet de refaire plusieurs prises si nécessaire.",
-    q6_question: "Quel est le délai de livraison de la vidéo d'une visite en drone ?",
-    q6_answer: "La plupart des vidéos de visite en drone sont livrées en moins de 24 heures. Les délais de livraison pour d'autres vidéos de visite en drone sont généralement de 72 heures, mais peuvent varier en fonction du projet.",
+    q5_answer:
+      "Pendant une prestation, les étapes suivantes sont suivies dans l'ordre : parcours des lieux, établissement d'une trajectoire de capture vidéo initiale en fonction de vos préférences, le premier vol offre un aperçu de la vidéo, des vols supplémentaires sont effectués jusqu'à l'obtention d'un résultat satisfaisant. Le drone a une autonomie de vol de 40 minutes, répartie sur 3 batteries, ce qui permet de refaire plusieurs prises si nécessaire.",
+    q6_question:
+      "Quel est le délai de livraison de la vidéo d'une visite en drone ?",
+    q6_answer:
+      "La plupart des vidéos de visite en drone sont livrées en moins de 24 heures. Les délais de livraison pour d'autres vidéos de visite en drone sont généralement de 72 heures, mais peuvent varier en fonction du projet.",
     q7_question: "Quels sont les tarifs ?",
-    q7_answer: "Les tarifs sont déterminés en fonction de la durée de la prestation, du nombre de lieux à filmer, et de la complexité des prises de vue à réaliser. Pour obtenir un devis personnalisé, veuillez nous contacter. Des prix indicatifs sont disponibles sur la page Services.",
-    q8_question: "Y a-t-il des préoccupations en matière de sécurité lors de la conduite d'un drone en intérieur ?",
-    q8_answer: "Nous utilisons des drones spécialement conçus et réglés pour voler lentement en intérieur. Ils sont équipés de protections autour des hélices, ce qui les rend extrêmement sûrs pour le vol en intérieur.",
+    q7_answer:
+      "Les tarifs sont déterminés en fonction de la durée de la prestation, du nombre de lieux à filmer, et de la complexité des prises de vue à réaliser. Pour obtenir un devis personnalisé, veuillez nous contacter. Des prix indicatifs sont disponibles sur la page Services.",
+    q8_question:
+      "Y a-t-il des préoccupations en matière de sécurité lors de la conduite d'un drone en intérieur ?",
+    q8_answer:
+      "Nous utilisons des drones spécialement conçus et réglés pour voler lentement en intérieur. Ils sont équipés de protections autour des hélices, ce qui les rend extrêmement sûrs pour le vol en intérieur.",
     q9_question: "Où sommes-nous situés ?",
-    q9_answer: "Nous pouvons réaliser des prestations en région parisienne ou aux alentours de Toulouse. Pour des prestations en dehors de ces zones, veuillez nous contacter. Des frais de déplacement peuvent s'appliquer.",
-    video1_description: "Une visite virtuelle animée d'une maison en bord de mer. Ces vidéos animées peuvent être créées pour des propriétés privées de toutes sortes.",
-    video2_description: "Une maison de plus de 200 mètres carrés en plein milieu de la forêt. Les visites immobilières par drone permettent de mieux comprendre l'espace par rapport aux visites traditionnelles.",
-    video3_description: "Découvrez la beauté du Sud de la France avec cette vidéo.",    residential_title: "Lieux résidentiels",
-    residential_description: "Profitez d'un avantage concurrentiel pour vendre vos annonces résidentielles plus rapidement !",
+    q9_answer:
+      "Nous pouvons réaliser des prestations en région parisienne ou aux alentours de Toulouse. Pour des prestations en dehors de ces zones, veuillez nous contacter. Des frais de déplacement peuvent s'appliquer.",
+    video1_description:
+      "Une visite virtuelle animée d'une maison en bord de mer. Ces vidéos animées peuvent être créées pour des propriétés privées de toutes sortes.",
+    video2_description:
+      "Une maison de plus de 200 mètres carrés en plein milieu de la forêt. Les visites immobilières par drone permettent de mieux comprendre l'espace par rapport aux visites traditionnelles.",
+    video3_description:
+      "Découvrez la beauté du Sud de la France avec cette vidéo.",
+    residential_title: "Lieux résidentiels",
+    residential_description:
+      "Profitez d'un avantage concurrentiel pour vendre vos annonces résidentielles plus rapidement !",
     local_business_title: "Entreprises Locales",
-    local_business_description: "Mettez en valeur votre commerce avec une vidéo à destination des réseaux sociaux !",
+    local_business_description:
+      "Mettez en valeur votre commerce avec une vidéo à destination des réseaux sociaux !",
     event_title: "Evenementiel",
-    event_description: "Laissez nous couvrir votre évènement sous un angle inédit !",
+    event_description:
+      "Laissez nous couvrir votre évènement sous un angle inédit !",
     office_title: "Bureaux",
-    office_description: "Faites la promotion de vos espaces de travail / coworking avec une vidéo sur mesure !",
+    office_description:
+      "Faites la promotion de vos espaces de travail / coworking avec une vidéo sur mesure !",
     hostel_title: "Hôtels et hébergements locatifs",
-    hostel_description: "Faites découvrir votre complexe hôtellier à travers une vidéo immersive !",
+    hostel_description:
+      "Faites découvrir votre complexe hôtellier à travers une vidéo immersive !",
     construction_title: "Site de constructions",
-    construction_description: "Capturez et partagez l'avancement de vos projets de construction comme jamais auparavant !",
+    construction_description:
+      "Capturez et partagez l'avancement de vos projets de construction comme jamais auparavant !",
+    aerial_3d_title:
+      "Au-delà des vols intérieurs : Photographie aérienne & Modélisation 3D",
+    aerial_3d_subtitle:
+      "Nous ne volons pas seulement en intérieur. Découvrez notre gamme complète de services de drone, incluant la photographie aérienne époustouflante et des solutions avancées de modélisation 3D.",
+
+    aerial_photography_title: "Photographie Aérienne",
+    aerial_photography_description:
+      "Capturez des vues aériennes à couper le souffle de votre propriété ou de votre lieu avec nos services professionnels de drone en extérieur. Parfait pour mettre en valeur des paysages, des bâtiments et des propriétés sous des angles uniques que la photographie au sol ne peut tout simplement pas atteindre.",
+
+    exterior_3d_title: "Modèles 3D Extérieurs",
+    exterior_3d_description:
+      "Grâce à des techniques avancées de photogrammétrie, nous pouvons créer des modèles 3D détaillés d'extérieurs de bâtiments, de chantiers de construction et de paysages. Ces modèles fournissent des mesures précises, des capacités de visualisation et peuvent être intégrés sur votre site web pour une visualisation interactive.",
+
+    interior_3d_title: "Numérisation LIDAR d'Intérieur",
+    interior_3d_description:
+      "Notre technologie LIDAR de pointe crée des modèles 3D précis des espaces intérieurs. Ces modèles peuvent être utilisés pour des visites virtuelles, des mesures précises, la planification du placement des meubles et la visualisation des rénovations. Parfait pour l'immobilier, l'architecture et la décoration d'intérieur.",
+
+    learn_more_cta: "En savoir plus sur nos services 3D",
   },
 };
 

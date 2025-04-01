@@ -5,6 +5,7 @@ import HeroSection from "@/components/home/hero-section";
 import ServicesSection from "@/components/home/services-section";
 import ShowreelSection from "@/components/home/showreel-section";
 import AboutSection from "@/components/home/about-section";
+import Aerial3DSection from "@/components/home/aerial-3d-section";
 
 export default function Home() {
   return (
@@ -18,6 +19,10 @@ export default function Home() {
       <Separator className="hidden dark:block" />
 
       <ShowreelSection />
+
+      <Separator className="hidden dark:block" />
+
+      <Aerial3DSection />
 
       <Separator />
 

@@ -5,6 +5,7 @@ const translations = {
     services: "Services",
     portfolio: "Portfolio",
     faq: "FAQ",
+    contact: "Contact",
     video_description: "Single-take walkthrough videos that stand out.",
     video_text:
       "We fly small drones indoors creating seamless walkthrough videos for real estate, businesses, hotels, & more.",
@@ -146,6 +147,15 @@ const translations = {
     request_service: "Request This Service",
     interested_in_service:
       "Interested in this service? Contact us for a personalized quote!",
+
+    contact_page_description:
+      "Have a question or want to book a service? Fill out the form below and we'll get back to you as soon as possible.",
+    send_another_message: "Send Another Message",
+    form_error: "There was an error submitting the form. Please try again.",
+    form_success: "Your message has been sent successfully!",
+    fullNameMin: "Full name must be at least 2 characters",
+    emailInvalid: "Please enter a valid email address",
+    messageMin: "Message must be at least 10 characters",
   },
   fr: {
     header_company_name: "DronInside",
@@ -153,6 +163,7 @@ const translations = {
     services: "Services",
     portfolio: "Portfolio",
     faq: "FAQ",
+    contact: "Contact",
     video_description: "Visites virtuelles de drone en intérieur",
     video_text:
       "Nous volons en intérieur avec de petits drones pour créer une visite virtuelle vidéo sans précédent pour l'immobilier, les entreprises, les hôtels, et bien plus encore.",
@@ -301,6 +312,16 @@ const translations = {
     request_service: "Demander Ce Service",
     interested_in_service:
       "Intéressé par ce service ? Contactez-nous pour un devis personnalisé !",
+
+    contact_page_description:
+      "Vous avez une question ou souhaitez réserver un service ? Remplissez le formulaire ci-dessous et nous vous répondrons dans les plus brefs délais.",
+    send_another_message: "Envoyer un autre message",
+    form_error:
+      "Une erreur s'est produite lors de l'envoi du formulaire. Veuillez réessayer.",
+    form_success: "Votre message a été envoyé avec succès !",
+    fullNameMin: "Le nom complet doit comporter au moins 2 caractères",
+    emailInvalid: "Veuillez entrer une adresse e-mail valide",
+    messageMin: "Le message doit contenir au moins 10 caractères",
   },
 };
 

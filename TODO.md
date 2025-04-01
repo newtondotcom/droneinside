@@ -2,8 +2,6 @@
 
 > Make on commit per point
 
-## I see two scroll bars on my landing page, the second one is caused by the footer forcing a height bigger than the screen's one. Fix that.
-
 ## Use motion to animate sections contents on appearing, be creative with shaking, translations
 
 ## Feel free to improve my translation system, by changing the structure of the files containing the translations for example, organizing them per page

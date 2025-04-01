@@ -1,148 +1,143 @@
 "use client";
 
-import { redirect, useParams } from "next/navigation";
-import { useState, useEffect } from "react";
+import { motion } from "motion/react";
+import { CuboidIcon as Cube, DrillIcon as Drone, Mountain } from "lucide-react";
 import translate from "@/lib/locales/function";
-import videos from "@/lib/data/videos";
-import type { Video as VideoType } from "@/lib/data/videos";
-import { cn } from "@/lib/utils";
+import Image from "next/image";
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
-import { motion } from "framer-motion";
-import { Video } from "lucide-react";
-import { ServiceType } from "@/lib/data/services";
-import HeroVideoDialog from "../magicui/hero-video-dialog";
 
-export default function ServicePage() {
-  const params = useParams();
-  const serviceName = params.name as ServiceType;
-
-  if (!Object.values(ServiceType).includes(serviceName as ServiceType)) {
-    redirect("/404");
-  }
-
-  const [relatedVideos, setRelatedVideos] = useState<VideoType[]>([]);
-
-  // Get service title and description based on service name
-  const getServiceTitle = (): string => {
-    return translate(`${serviceName}_title`) || serviceName;
-  };
-
-  useEffect(() => {
-    // Filter videos that match the current service type
-    const filteredVideos = videos.filter(
-      (video) => video.type.toLowerCase() === serviceName.toLowerCase(),
-    );
-    setRelatedVideos(filteredVideos);
-  }, [serviceName]);
-
-  const getServiceDescription = (): string => {
-    return translate(`${serviceName}_description`) || "";
-  };
-
+export default function Aerial3DSection() {
   return (
-    <div className="container mx-auto px-4 py-16">
-      <div className="mb-12 text-center">
-        <h1 className="text-4xl font-bold text-primary mb-4">
-          {getServiceTitle()}
-        </h1>
-        <p className="text-lg text-neutral-600 dark:text-neutral-300 max-w-3xl mx-auto">
-          {getServiceDescription()}
-        </p>
-      </div>
-
-      <div className="mb-8">
-        <h2 className="text-2xl font-semibold mb-6">
-          {translate("related_videos")}
-        </h2>
-
-        {relatedVideos.length > 0 ? (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {relatedVideos.map((video, index) => (
-              <VideoCard key={index} video={video} />
-            ))}
-          </div>
-        ) : (
-          <NoVideosPlaceholder getServiceTitle={getServiceTitle} />
-        )}
-      </div>
-
-      <div className="mt-12 text-center">
-        <p className="text-lg mb-6">{translate("interested_in_service")}</p>
-        <Link href="/contact">
-          <Button size="lg" className="font-medium">
-            {translate("contact_us")}
-          </Button>
-        </Link>
-      </div>
-    </div>
-  );
-}
-
-interface VideoCardProps {
-  video: VideoType;
-}
-
-function VideoCard({ video }: VideoCardProps) {
-  return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5 }}
-      className="bg-white dark:bg-neutral-800 rounded-xl shadow-md overflow-hidden"
+    <section
+      id="aerial-3d"
+      className="h-screen w-full snap-start flex items-center justify-center overflow-hidden"
     >
-      <div className="relative h-48 w-full">
-        <HeroVideoDialog
-          className="block dark:hidden"
-          animationStyle="from-center"
-          videoSrc={`https://www.youtube.com/embed/${video.id}`}
-          thumbnailSrc="/construction.jpeg"
-          thumbnailAlt="Hero Video"
-        />
-        <HeroVideoDialog
-          className="hidden dark:block"
-          animationStyle="from-center"
-          videoSrc={`https://www.youtube.com/embed/${video.id}`}
-          thumbnailSrc="/construction.jpeg"
-          thumbnailAlt="Hero Video"
-        />
-      </div>
-      <div className="p-4">
-        <h3 className="font-semibold text-lg mb-2">
-          {translate(video.descriptionKey)}
-        </h3>
-      </div>
-    </motion.div>
-  );
-}
+      <div className="container mx-auto px-4">
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="text-center mb-12"
+        >
+          <h2 className="text-3xl md:text-5xl font-bold text-primary mb-4">
+            {translate("aerial_3d_title")}
+          </h2>
+          <p className="text-lg text-neutral-600 dark:text-neutral-300 max-w-3xl mx-auto">
+            {translate("aerial_3d_subtitle")}
+          </p>
+        </motion.div>
 
-interface NoVideosPlaceholderProps {
-  getServiceTitle: () => string;
-}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {/* Outdoor Aerial Photography */}
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            viewport={{ once: true }}
+            className="bg-white dark:bg-neutral-800 rounded-xl shadow-lg p-6 flex flex-col"
+          >
+            <div className="flex items-center mb-4">
+              <div className="bg-primary/10 p-3 rounded-full mr-4">
+                <Drone className="h-8 w-8 text-primary" />
+              </div>
+              <h3 className="text-xl font-semibold">
+                {translate("aerial_photography_title")}
+              </h3>
+            </div>
+            <p className="text-neutral-600 dark:text-neutral-300 mb-4">
+              {translate("aerial_photography_description")}
+            </p>
+            <div className="mt-auto">
+              <div className="relative h-48 w-full rounded-lg overflow-hidden">
+                <Image
+                  src="/aerial-view.jpg"
+                  alt={translate("aerial_photography_title")}
+                  fill
+                  className="object-cover"
+                />
+              </div>
+            </div>
+          </motion.div>
 
-function NoVideosPlaceholder({ getServiceTitle }: NoVideosPlaceholderProps) {
-  return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.5 }}
-      className={cn(
-        "bg-neutral-100 dark:bg-neutral-800/50 rounded-xl p-8 text-center",
-        "border border-dashed border-neutral-300 dark:border-neutral-700",
-      )}
-    >
-      <div className="mx-auto w-16 h-16 mb-4 rounded-full bg-neutral-200 dark:bg-neutral-700 flex items-center justify-center">
-        <Video className="h-8 w-8 text-neutral-500 dark:text-neutral-400" />
+          {/* Exterior 3D Models */}
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            viewport={{ once: true }}
+            className="bg-white dark:bg-neutral-800 rounded-xl shadow-lg p-6 flex flex-col"
+          >
+            <div className="flex items-center mb-4">
+              <div className="bg-primary/10 p-3 rounded-full mr-4">
+                <Mountain className="h-8 w-8 text-primary" />
+              </div>
+              <h3 className="text-xl font-semibold">
+                {translate("exterior_3d_title")}
+              </h3>
+            </div>
+            <p className="text-neutral-600 dark:text-neutral-300 mb-4">
+              {translate("exterior_3d_description")}
+            </p>
+            <div className="mt-auto">
+              <div className="relative h-48 w-full rounded-lg overflow-hidden">
+                <Image
+                  src="/photogrammetry.jpg"
+                  alt={translate("exterior_3d_title")}
+                  fill
+                  className="object-cover"
+                />
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Interior 3D Models */}
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            viewport={{ once: true }}
+            className="bg-white dark:bg-neutral-800 rounded-xl shadow-lg p-6 flex flex-col"
+          >
+            <div className="flex items-center mb-4">
+              <div className="bg-primary/10 p-3 rounded-full mr-4">
+                <Cube className="h-8 w-8 text-primary" />
+              </div>
+              <h3 className="text-xl font-semibold">
+                {translate("interior_3d_title")}
+              </h3>
+            </div>
+            <p className="text-neutral-600 dark:text-neutral-300 mb-4">
+              {translate("interior_3d_description")}
+            </p>
+            <div className="mt-auto">
+              <div className="relative h-48 w-full rounded-lg overflow-hidden">
+                <Image
+                  src="/lidar-scan.jpg"
+                  alt={translate("interior_3d_title")}
+                  fill
+                  className="object-cover"
+                />
+              </div>
+            </div>
+          </motion.div>
+        </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.5 }}
+          viewport={{ once: true }}
+          className="mt-12 text-center"
+        >
+          <Link
+            href="/contact"
+            className="inline-flex h-12 items-center justify-center rounded-md bg-primary px-8 text-base font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
+          >
+            {translate("learn_more_cta")}
+          </Link>
+        </motion.div>
       </div>
-      <h3 className="text-xl font-medium mb-2">
-        {translate("no_videos_title")}
-      </h3>
-      <p className="text-neutral-600 dark:text-neutral-400 mb-6">
-        {translate("no_videos_message", { service: getServiceTitle() })}
-      </p>
-      <Link href="/contact">
-        <Button variant="outline">{translate("request_service")}</Button>
-      </Link>
-    </motion.div>
+    </section>
   );
 }

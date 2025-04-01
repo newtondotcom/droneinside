@@ -7,7 +7,7 @@ import services from "@/lib/data/services";
 
 const Services = () => {
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col mt-20">
       <Title
         title={translate("services_title")}
         subtitle={translate("service_subtitle")}

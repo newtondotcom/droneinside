@@ -1,4 +1,5 @@
 "use client";
+import Title from "@/components/layout/title";
 import {
   Accordion,
   AccordionItem,
@@ -34,25 +35,21 @@ export default function FAQ() {
   }, []);
 
   return (
-    <div className="mx-auto min-h-screen max-w-screen-xl px-5">
-      <div className="flex flex-col items-center">
-        <h2 className="mt-5 text-5xl font-bold tracking-tight text-black">
-          FAQ
-        </h2>
-        <p className="mt-3 text-xl text-neutral-500">
-          {translate("faq_title")}
-        </p>
-      </div>
+    <div className="mx-auto min-h-screen max-w-screen-xl px-5  mt-20">
+      <Title
+        title={translate("faq_title")}
+        subtitle={translate("faq_subtitle")}
+      />
       <Accordion
         type="single"
         collapsible
-        className="mx-auto mt-8 max-w-xl divide-y divide-neutral-200 text-black"
+        className="mx-auto mt-8 max-w-xl divide-y divide-neutral-200"
       >
         {faqList.map(({ question, answer }, index) => (
           <AccordionItem key={index} value={`item-${index}`}>
             <AccordionTrigger>{question}</AccordionTrigger>
             <AccordionContent>
-              <p className="mt-3 text-black">{answer}</p>
+              <p className="mt-3">{answer}</p>
             </AccordionContent>
           </AccordionItem>
         ))}

@@ -22,6 +22,7 @@ const translations = {
     form_submitted: "Your message has been successfully sent!",
     response_message: "We will get back to you as soon as possible.",
     contact_us: "Contact Us",
+    contact_us_button: "Contact Us",
     full_name: "Full Name",
     full_name_placeholder: "John Doe",
     email: "Email",
@@ -100,6 +101,8 @@ const translations = {
     construction_title: "Construction",
     construction_description:
       "Capture and share the progress of your construction projects like never before!",
+
+    // New translations for aerial and 3D section
     aerial_3d_title: "Beyond Indoor Flights: Aerial Photography & 3D Modeling",
     aerial_3d_subtitle:
       "We don't just fly indoors. Discover our complete range of drone services including stunning aerial photography and advanced 3D modeling solutions.",
@@ -117,6 +120,23 @@ const translations = {
       "Our cutting-edge LIDAR technology creates precise 3D models of interior spaces. These models can be used for virtual tours, accurate measurements, furniture placement planning, and renovation visualization. Perfect for real estate, architecture, and interior design.",
 
     learn_more_cta: "Learn More About Our 3D Services",
+
+    // Real Estate Agent Modal
+    re_agent_cta: "Are you a real estate agent looking to showcase a property?",
+    re_modal_title: "Stand out from the competition with",
+    re_modal_highlight: "DronInside",
+
+    re_feature_1_title: "Unique Perspectives",
+    re_feature_1_desc:
+      "Our drone tours provide seamless walkthroughs with unique angles and perspectives that traditional videos can't match, giving potential buyers a true sense of the property's flow and space.",
+
+    re_feature_2_title: "Floor Plans with Automatic Calculations",
+    re_feature_2_desc:
+      "We create detailed floor plans with automatic area calculations, helping buyers understand the layout and dimensions of the property at a glance.",
+
+    re_feature_3_title: "3D Models for Houses",
+    re_feature_3_desc:
+      "For houses, we can create interactive 3D models using photogrammetry, allowing potential buyers to explore the property from any angle, inside and out, before scheduling an in-person visit.",
   },
   fr: {
     header_company_name: "DronInside",
@@ -141,6 +161,7 @@ const translations = {
     form_submitted: "Votre message a bien été envoyé !",
     response_message: "Nous vous répondrons dans les plus brefs délais.",
     contact_us: "Contactez-nous",
+    contact_us_button: "Contactez-nous",
     full_name: "Nom & Prénom",
     full_name_placeholder: "Michel Dupont",
     email: "Email",
@@ -224,6 +245,8 @@ const translations = {
     construction_title: "Site de constructions",
     construction_description:
       "Capturez et partagez l'avancement de vos projets de construction comme jamais auparavant !",
+
+    // New translations for aerial and 3D section
     aerial_3d_title:
       "Au-delà des vols intérieurs : Photographie aérienne & Modélisation 3D",
     aerial_3d_subtitle:
@@ -242,6 +265,24 @@ const translations = {
       "Notre technologie LIDAR de pointe crée des modèles 3D précis des espaces intérieurs. Ces modèles peuvent être utilisés pour des visites virtuelles, des mesures précises, la planification du placement des meubles et la visualisation des rénovations. Parfait pour l'immobilier, l'architecture et la décoration d'intérieur.",
 
     learn_more_cta: "En savoir plus sur nos services 3D",
+
+    // Real Estate Agent Modal
+    re_agent_cta:
+      "Vous êtes agent immobilier et souhaitez mettre en valeur un bien ?",
+    re_modal_title: "Démarquez-vous de la concurrence avec",
+    re_modal_highlight: "DronInside",
+
+    re_feature_1_title: "Perspectives Uniques",
+    re_feature_1_desc:
+      "Nos visites en drone offrent des parcours fluides avec des angles et des perspectives uniques que les vidéos traditionnelles ne peuvent pas égaler, donnant aux acheteurs potentiels une véritable idée de la circulation et de l'espace de la propriété.",
+
+    re_feature_2_title: "Plans d'étage avec calculs automatiques",
+    re_feature_2_desc:
+      "Nous créons des plans d'étage détaillés avec des calculs automatiques de surface, aidant les acheteurs à comprendre la disposition et les dimensions de la propriété en un coup d'œil.",
+
+    re_feature_3_title: "Modèles 3D pour maisons",
+    re_feature_3_desc:
+      "Pour les maisons, nous pouvons créer des modèles 3D interactifs à l'aide de la photogrammétrie, permettant aux acheteurs potentiels d'explorer la propriété sous tous les angles, à l'intérieur comme à l'extérieur, avant de planifier une visite en personne.",
   },
 };
 

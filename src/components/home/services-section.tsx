@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import translate from "@/lib/locales/function";
+import { RealEstateModal } from "@/components/ui/real-estate-modal";
 
 export default function ServicesSection() {
   return (
@@ -44,6 +45,10 @@ export default function ServicesSection() {
               >
                 {translate("get_started")}
               </Link>
+            </div>
+
+            <div className="mt-8">
+              <RealEstateModal />
             </div>
           </div>
         </div>

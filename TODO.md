@@ -166,11 +166,11 @@ export function AnimatedModalDemo() {
 
 ## Use motion to animate sections contents on appearing, be creative with shaking, translations
 
-## In `src/app/service/[name]/page.tsx`, show a little description of each possible service, with a list of related video and a placeholder if no video exist for this
+## In `src/app/service/[name]/page.tsx`, show a little description of each possible service [name], with a list of existing related videos and a placeholder if no video exist for this (videos described in `src/lib/data/videos.ts` features a field called type which corresponds with a serviceType)
 
 ## Feel free to improve my translation system, by changing the structure of the files containing the translations for example, organizing them per page
 
-## I see two scroll bars on my landing page, the second one is caused by the footer, making a heigh bigger than the screen's one. Fix that.
+## I see two scroll bars on my landing page, the second one is caused by the footer forcing a height bigger than the screen's one. Fix that.
 
 ## Tweak a bit my catch phrases to make them attractives for customers.
 

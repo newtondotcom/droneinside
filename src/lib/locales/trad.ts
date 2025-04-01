@@ -41,7 +41,8 @@ const translations = {
     service_subtitle:
       "The premier virtual tour for commercial real estate, businesses, hotels, apartment leasing, & more",
     book_now: "Book now",
-    faq_title: "Frequently Asked Questions",
+    faq_title: "Q&A",
+    faq_subtitle: "Frequently Asked Questions",
     made_from: "Made with ❤️ in Paris 🥐",
     residential: "Residential",
     local_business: "Local Business",
@@ -156,6 +157,10 @@ const translations = {
     fullNameMin: "Full name must be at least 2 characters",
     emailInvalid: "Please enter a valid email address",
     messageMin: "Message must be at least 10 characters",
+    page_not_found: "Page not found",
+    not_found_desc:
+      "Sorry, we couldn&apos;t find the page you&apos;re looking for.",
+    return_home: "Return to home",
   },
   fr: {
     header_company_name: "DronInside",
@@ -200,7 +205,8 @@ const translations = {
     service_subtitle:
       "La visite virtuelle par excellence pour l'immobilier commercial, les entreprises, les hôtels, la location d'appartements, et bien plus encore.",
     book_now: "Réservez maintenant",
-    faq_title: "Questions Fréquemment Posées",
+    faq_title: "FAQ",
+    faq_subtitle: "Questions Fréquemment Posées",
     made_from: "Fait avec ❤️ à Paris 🥐",
     residential: "Résidentiel",
     local_business: "Petit commerce",
@@ -322,6 +328,10 @@ const translations = {
     fullNameMin: "Le nom complet doit comporter au moins 2 caractères",
     emailInvalid: "Veuillez entrer une adresse e-mail valide",
     messageMin: "Le message doit contenir au moins 10 caractères",
+    page_not_found: "Page non trouvée",
+    not_found_desc:
+      "Désolé, nous n'avons pas pu trouver la page que vous recherchez",
+    return_home: "Retour à l'accueil",
   },
 };
 

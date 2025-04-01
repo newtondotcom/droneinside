@@ -101,7 +101,9 @@ export const ModalBody = ({ children, className }: ModalBodyProps) => {
     }
   }, [open]);
 
-  useOutsideClick(modalRef, () => setOpen(false));
+  useOutsideClick(modalRef as React.RefObject<HTMLElement>, () =>
+    setOpen(false),
+  );
 
   return (
     <AnimatePresence>

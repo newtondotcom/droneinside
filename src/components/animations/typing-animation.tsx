@@ -17,7 +17,6 @@ export default function TypingAnimation({
 }: TypingAnimationProps) {
   const [currentSentenceIndex, setCurrentSentenceIndex] = useState(0);
   const [displayedText, setDisplayedText] = useState("");
-  const [isTyping, setIsTyping] = useState(true);
   const [isFinished, setIsFinished] = useState(false);
 
   useEffect(() => {
@@ -26,31 +25,28 @@ export default function TypingAnimation({
     let timeout: NodeJS.Timeout;
     const currentSentence = sentences[currentSentenceIndex];
 
-    if (isTyping) {
-      if (displayedText.length < currentSentence.length) {
-        // Typing the current sentence
-        timeout = setTimeout(() => {
-          setDisplayedText(
-            currentSentence.substring(0, displayedText.length + 1),
-          );
-        }, typingSpeed);
-      } else {
-        // Finished typing, pause before moving to the next sentence
-        timeout = setTimeout(() => {
-          if (currentSentenceIndex < sentences.length - 1) {
-            setCurrentSentenceIndex((prev) => prev + 1);
-            setDisplayedText(""); // Clear displayed text for the next sentence
-          } else {
-            setIsFinished(true); // Freeze on the last sentence
-          }
-        }, delayBetweenSentences);
-      }
+    if (displayedText.length < currentSentence.length) {
+      // Typing the current sentence
+      timeout = setTimeout(() => {
+        setDisplayedText(
+          currentSentence.substring(0, displayedText.length + 1),
+        );
+      }, typingSpeed);
+    } else {
+      // Finished typing, pause before moving to the next sentence
+      timeout = setTimeout(() => {
+        if (currentSentenceIndex < sentences.length - 1) {
+          setCurrentSentenceIndex((prev) => prev + 1);
+          setDisplayedText(""); // Clear displayed text for the next sentence
+        } else {
+          setIsFinished(true); // Freeze on the last sentence
+        }
+      }, delayBetweenSentences);
     }
 
     return () => clearTimeout(timeout);
   }, [
     displayedText,
-    isTyping,
     currentSentenceIndex,
     sentences,
     typingSpeed,

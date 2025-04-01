@@ -137,6 +137,15 @@ const translations = {
     re_feature_3_title: "3D Models for Houses",
     re_feature_3_desc:
       "For houses, we can create interactive 3D models using photogrammetry, allowing potential buyers to explore the property from any angle, inside and out, before scheduling an in-person visit.",
+
+    // Service page translations
+    related_videos: "Related Videos",
+    no_videos_title: "No Videos Available Yet",
+    no_videos_message:
+      "We don't have any videos for this service type yet. Contact us to be the first to showcase your property with our professional drone services!",
+    request_service: "Request This Service",
+    interested_in_service:
+      "Interested in this service? Contact us for a personalized quote!",
   },
   fr: {
     header_company_name: "DronInside",
@@ -283,6 +292,15 @@ const translations = {
     re_feature_3_title: "Modèles 3D pour maisons",
     re_feature_3_desc:
       "Pour les maisons, nous pouvons créer des modèles 3D interactifs à l'aide de la photogrammétrie, permettant aux acheteurs potentiels d'explorer la propriété sous tous les angles, à l'intérieur comme à l'extérieur, avant de planifier une visite en personne.",
+
+    // Service page translations
+    related_videos: "Vidéos Associées",
+    no_videos_title: "Pas Encore de Vidéos Disponibles",
+    no_videos_message:
+      "Nous n'avons pas encore de vidéos pour ce type de service. Contactez-nous pour être le premier à mettre en valeur votre propriété avec nos services professionnels de drone !",
+    request_service: "Demander Ce Service",
+    interested_in_service:
+      "Intéressé par ce service ? Contactez-nous pour un devis personnalisé !",
   },
 };
 

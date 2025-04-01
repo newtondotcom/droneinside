@@ -1,10 +1,11 @@
-export type ServiceType =
-  | "residential"
-  | "local-business"
-  | "event"
-  | "office"
-  | "hostel"
-  | "construction";
+export enum ServiceType {
+  RESIDENTIAL = "residential",
+  BUSINESS = "local-business",
+  EVENT = "event",
+  OFFICE = "office",
+  HOSTEL = "hostel",
+  CONSTRUCTION = "construction",
+}
 
 interface Service {
   key: ServiceType;
@@ -15,37 +16,37 @@ interface Service {
 
 const services: Service[] = [
   {
-    key: "residential",
+    key: ServiceType.RESIDENTIAL,
     price: 190,
     duration: 60,
     img: "/res.avif",
   },
   {
-    key: "local-business",
+    key: ServiceType.BUSINESS,
     price: 190,
     duration: 60,
     img: "/local-business.jpeg",
   },
   {
-    key: "event",
+    key: ServiceType.EVENT,
     price: 500,
     duration: "∞",
     img: "/event.jpeg",
   },
   {
-    key: "office",
+    key: ServiceType.OFFICE,
     price: 390,
     duration: 90,
     img: "/office.webp",
   },
   {
-    key: "hostel",
+    key: ServiceType.HOSTEL,
     price: 390,
     duration: 90,
     img: "/hotel.jpeg",
   },
   {
-    key: "construction",
+    key: ServiceType.CONSTRUCTION,
     price: 290,
     duration: 60,
     img: "/construction.jpeg",

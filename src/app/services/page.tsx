@@ -15,7 +15,7 @@ const Services = () => {
 
       <div className="grid grid-cols-1 gap-4 px-4 sm:grid-cols-2 md:grid-cols-3 md:px-24 lg:grid-cols-3">
         {services.map((service) => (
-          <Link key={service.key} href="/contact">
+          <Link key={service.key} href={"/service/" + service.key}>
             <div className="border rounded-lg shadow-lg overflow-hidden h-full">
               <div className="p-4 text-left">
                 <h2 className="text-lg font-semibold">

@@ -14,10 +14,6 @@
 
 ## Make sure dark/white theme are operationnal
 
-## Create a contact page using server action located in `/src/lib/actions/discord.ts`, using zod
-
-## Translate the `not-found.tsx` page
-
 ## Use simpleicons.org for footer icons, add link for BluSky also
 
 ## Créer la page type d'une annonce immobilière

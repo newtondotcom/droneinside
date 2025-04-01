@@ -9,22 +9,18 @@ import AboutSection from "@/components/home/about-section";
 export default function Home() {
   return (
     <div className="h-screen w-full overflow-y-auto snap-y snap-mandatory">
-      {/* Typing Animation Hero Section */}
       <HeroSection />
 
       <Separator className="hidden dark:block" />
 
-      {/* Services Section */}
       <ServicesSection />
 
       <Separator className="hidden dark:block" />
 
-      {/* Showreel Section */}
       <ShowreelSection />
 
       <Separator />
 
-      {/* About Section */}
       <AboutSection />
     </div>
   );

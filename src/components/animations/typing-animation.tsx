@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import React from "react";
 
 interface TypingAnimationProps {
   sentences: string[];
@@ -17,8 +18,7 @@ export default function TypingAnimation({
   const [currentSentenceIndex, setCurrentSentenceIndex] = useState(0);
   const [displayedText, setDisplayedText] = useState("");
   const [isTyping, setIsTyping] = useState(true);
-  const [isDeleting, setIsDeleting] = useState(false);
-  const [isFinished, setIsFinished] = useState(false); // New state to track completion
+  const [isFinished, setIsFinished] = useState(false);
 
   useEffect(() => {
     if (!sentences.length || isFinished) return; // Stop if finished
@@ -35,29 +35,15 @@ export default function TypingAnimation({
           );
         }, typingSpeed);
       } else {
-        // Finished typing, pause before deleting (unless it's the last sentence)
+        // Finished typing, pause before moving to the next sentence
         timeout = setTimeout(() => {
           if (currentSentenceIndex < sentences.length - 1) {
-            setIsTyping(false);
-            setIsDeleting(true);
+            setCurrentSentenceIndex((prev) => prev + 1);
+            setDisplayedText(""); // Clear displayed text for the next sentence
           } else {
             setIsFinished(true); // Freeze on the last sentence
           }
         }, delayBetweenSentences);
-      }
-    } else if (isDeleting) {
-      if (displayedText.length > 0) {
-        // Deleting the current sentence
-        timeout = setTimeout(() => {
-          setDisplayedText(
-            displayedText.substring(0, displayedText.length - 1),
-          );
-        }, typingSpeed / 2);
-      } else {
-        // Finished deleting, move to next sentence
-        setIsDeleting(false);
-        setIsTyping(true);
-        setCurrentSentenceIndex((prev) => prev + 1);
       }
     }
 
@@ -65,7 +51,6 @@ export default function TypingAnimation({
   }, [
     displayedText,
     isTyping,
-    isDeleting,
     currentSentenceIndex,
     sentences,
     typingSpeed,
@@ -81,7 +66,12 @@ export default function TypingAnimation({
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
       >
-        <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-primary">
+        <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-primary space-y-8">
+          {sentences.slice(0, currentSentenceIndex).map((sentence, index) => (
+            <React.Fragment key={index}>
+              <div>{sentence}</div>
+            </React.Fragment>
+          ))}
           {displayedText}
           {!isFinished && ( // Only show blinking cursor if not finished
             <motion.span

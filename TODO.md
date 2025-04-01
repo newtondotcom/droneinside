@@ -2,18 +2,11 @@
 
 > Make on commit per point
 
-## Create multiples sections from the landing page with proper Id, make them to use full screen height and use scroll snap option
-
-## Replace the first section and make it a full screen animation using motion that is like typing and writing something like :
-"Chez Droninside, nous faisons voler des drones en intérieur."
-"Mais pourquoi faire nous diriez vous ?"
-"Pour débloquer des nouvelles persectives"
-
-## In the last section, make mention somewhere saying that we are not only doing inside fly but also outdoor for aerial shot. Parles de la possibilité de construire des modèles 3D :
+## Create a new section, make mention somewhere saying that we are not only doing inside fly but also outdoor for aerial shot. Parles de la possibilité de construire des modèles 3D :
 - de l'extérieur à l'aide de la photogrammétrie (applicable pour tous les services sauf les evenemetns et les appartements)
 - l'intérieur pour les logements à l'aide de la technologie LIDAR pour l'afficher sur un site web, ou faire des mesures, ou prévoir la disposition des meubles.
 
-## Dans la landing page, Partie dédiée pour les biens immobilliers : (trouvez un moyen de faire un modal quand l'utilisateur clique sur un bouton voyant ?)
+## Dans la landing page, Partie dédiée pour les biens immobilliers : (trouvez un moyen de faire un modal quand l'utilisateur clique sur un bouton voyant disant "vous etes agent immbollier et souhaitez mettre en valeur un bien ?")
 Démarquez vous :
 - perspectives uniques
 - plan au sol > calculs automatique

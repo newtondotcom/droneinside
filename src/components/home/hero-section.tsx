@@ -16,7 +16,7 @@ export default function HeroSection() {
     >
       <TypingAnimation
         sentences={typingTexts}
-        typingSpeed={100}
+        typingSpeed={90}
         delayBetweenSentences={50}
       />
     </section>

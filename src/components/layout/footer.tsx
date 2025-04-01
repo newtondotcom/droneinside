@@ -8,8 +8,11 @@ import { usePathname } from "next/navigation";
 
 const Footer = () => {
   const pathname = usePathname();
+  if (pathname == "/") {
+    return <></>;
+  }
   return (
-    <footer className="flex">
+    <footer className="flex snap-none snap-align-none">
       <div className="mx-auto max-w-5xl mt-4 px-4 py-16 sm:px-6 lg:px-8">
         <div className="flex justify-center">
           <Image

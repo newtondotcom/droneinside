@@ -15,7 +15,7 @@ export default function ShowreelSection() {
         <div className="mb-2 flex self-center bg-gradient-to-b from-primary to-primary-light bg-clip-text text-center text-4xl font-bold text-transparent md:text-7xl">
           Showreel
         </div>
-        <div className="relative w-full">
+        <div className="relative w-1/2">
           <HeroVideoDialog
             className="block dark:hidden"
             animationStyle="from-center"

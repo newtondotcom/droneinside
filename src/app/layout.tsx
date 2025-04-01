@@ -3,25 +3,36 @@ import "./globals.css";
 import Footer from "@/components/layout/footer";
 import Header from "@/components/layout/header";
 
+import type React from "react";
+import { cn } from "@/lib/utils";
+import { ThemeProvider } from "@/components/providers/theme-provider";
 
 export const metadata: Metadata = {
   title: "DronInside",
   description: "Découvrez le site de DronInside",
 };
 
+interface RootLayoutProps {
+  children: React.ReactNode;
+  params: {
+    locale: string;
+  };
+}
+
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+  params: { locale },
+}: RootLayoutProps) {
   return (
-    <html lang="en">
-      <body
-        className={`antialiased`}
-      >
-        <Header />
-        {children}
-        <Footer />
+    <html lang={locale} suppressHydrationWarning>
+      <body className={cn("min-h-screen bg-background font-sans antialiased")}>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <div className="relative flex min-h-screen flex-col">
+            <Header />
+            {children}
+            <Footer />
+          </div>
+        </ThemeProvider>
       </body>
     </html>
   );

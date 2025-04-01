@@ -119,10 +119,8 @@ function VideoCard({ video }: { video: any }) {
 }
 
 function NoVideosPlaceholder({
-  serviceName,
   getServiceTitle,
 }: {
-  serviceName: string;
   getServiceTitle: () => string;
 }) {
   return (

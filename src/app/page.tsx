@@ -9,7 +9,7 @@ import Aerial3DSection from "@/components/home/aerial-3d-section";
 
 export default function Home() {
   return (
-    <div className="h-screen w-full overflow-y-auto snap-y snap-mandatory">
+    <main className="h-screen w-full overflow-y-auto snap-y snap-mandatory">
       <HeroSection />
 
       <Separator className="hidden dark:block" />
@@ -27,6 +27,6 @@ export default function Home() {
       <Separator />
 
       <AboutSection />
-    </div>
+    </main>
   );
 }

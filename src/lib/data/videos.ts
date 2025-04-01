@@ -1,6 +1,6 @@
 import { ServiceType } from "@/lib/data/services";
 
-interface Video {
+export interface Video {
   id: string;
   descriptionKey: string;
   type: ServiceType;

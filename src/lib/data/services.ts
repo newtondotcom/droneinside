@@ -1,6 +1,6 @@
 export enum ServiceType {
   RESIDENTIAL = "residential",
-  BUSINESS = "local-business",
+  BUSINESS = "local_business",
   EVENT = "event",
   OFFICE = "office",
   HOSTEL = "hostel",

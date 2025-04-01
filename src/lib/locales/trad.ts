@@ -247,7 +247,7 @@ const translations = {
       "Une maison de plus de 200 mètres carrés en plein milieu de la forêt. Les visites immobilières par drone permettent de mieux comprendre l'espace par rapport aux visites traditionnelles.",
     video3_description:
       "Découvrez la beauté du Sud de la France avec cette vidéo.",
-    residential_title: "Lieux résidentiels",
+    residential_title: "Bien Immobilier",
     residential_description:
       "Profitez d'un avantage concurrentiel pour vendre vos annonces résidentielles plus rapidement !",
     local_business_title: "Entreprises Locales",

@@ -1,53 +1,45 @@
 "use client";
 
-import { redirect, useParams } from "next/navigation";
+import { redirect } from "next/navigation";
 import { useState, useEffect } from "react";
 import translate from "@/lib/locales/function";
 import videos from "@/lib/data/videos";
+import type { Video as VideoType } from "@/lib/data/videos";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 import { Play, Video } from "lucide-react";
 import { ServiceType } from "@/lib/data/services";
+import { useRouter } from "next/router";
 
 export default function ServicePage() {
-  const params = useParams();
-  const serviceName = params.name as string;
-  console.log(serviceName);
+  const router = useRouter();
+  const serviceName = router.query.name as ServiceType;
 
-  if (!Object.values(ServiceType).includes(serviceName as ServiceType)) {
+  // Validate service type
+  if (!Object.values(ServiceType).includes(serviceName)) {
     redirect("/404");
   }
 
-  const [relatedVideos, setRelatedVideos] = useState<any[]>([]);
-
-  // Get service title and description based on service name
-  const getServiceTitle = () => {
-    return translate(`${serviceName}_title`) || serviceName;
-  };
+  const [relatedVideos, setRelatedVideos] = useState<VideoType[]>([]);
+  const serviceTitle = translate(`${serviceName}_title`) || serviceName;
+  const serviceDescription = translate(`${serviceName}_description`) || "";
 
   useEffect(() => {
-    // Filter videos that match the current service type
     const filteredVideos = videos.filter(
       (video) => video.type.toLowerCase() === serviceName.toLowerCase(),
     );
     setRelatedVideos(filteredVideos);
   }, [serviceName]);
 
-  const getServiceDescription = () => {
-    return translate(`${serviceName}_description`) || "";
-  };
-
   return (
     <div className="container mx-auto px-4 py-16">
-      <div className="mb-12 text-center">
-        <h1 className="text-4xl font-bold text-primary mb-4">
-          {getServiceTitle()}
-        </h1>
+      <div className="mb-12 mt-20 text-center">
+        <h1 className="text-4xl font-bold text-primary mb-4">{serviceTitle}</h1>
         <p className="text-lg text-neutral-600 dark:text-neutral-300 max-w-3xl mx-auto">
-          {getServiceDescription()}
+          {serviceDescription}
         </p>
       </div>
 
@@ -58,15 +50,12 @@ export default function ServicePage() {
 
         {relatedVideos.length > 0 ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {relatedVideos.map((video, index) => (
-              <VideoCard key={index} video={video} />
+            {relatedVideos.map((video) => (
+              <VideoCard key={video.id} video={video} />
             ))}
           </div>
         ) : (
-          <NoVideosPlaceholder
-            serviceName={serviceName}
-            getServiceTitle={getServiceTitle}
-          />
+          <NoVideosPlaceholder serviceTitle={serviceTitle} />
         )}
       </div>
 
@@ -82,7 +71,11 @@ export default function ServicePage() {
   );
 }
 
-function VideoCard({ video }: { video: any }) {
+interface VideoCardProps {
+  video: VideoType;
+}
+
+function VideoCard({ video }: VideoCardProps) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -93,7 +86,7 @@ function VideoCard({ video }: { video: any }) {
       <div className="relative h-48 w-full">
         <Image
           src={video.thumbnail || "/placeholder.svg?height=400&width=600"}
-          alt={video.title}
+          alt={translate(video.descriptionKey)}
           fill
           className="object-cover"
         />
@@ -118,11 +111,11 @@ function VideoCard({ video }: { video: any }) {
   );
 }
 
-function NoVideosPlaceholder({
-  getServiceTitle,
-}: {
-  getServiceTitle: () => string;
-}) {
+interface NoVideosPlaceholderProps {
+  serviceTitle: string;
+}
+
+function NoVideosPlaceholder({ serviceTitle }: NoVideosPlaceholderProps) {
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -140,7 +133,7 @@ function NoVideosPlaceholder({
         {translate("no_videos_title")}
       </h3>
       <p className="text-neutral-600 dark:text-neutral-400 mb-6">
-        {translate("no_videos_message", { service: getServiceTitle() })}
+        {translate("no_videos_message", { service: serviceTitle })}
       </p>
       <Link href="/contact">
         <Button variant="outline">{translate("request_service")}</Button>

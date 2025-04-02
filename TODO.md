@@ -27,3 +27,5 @@
 ## Plausibleeeeeee
 
 ## Add chevron on first section sliding from above or down when typing animation is over
+
+## Style opening header on mobile

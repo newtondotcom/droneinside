@@ -50,6 +50,8 @@ const translations = {
     hostel: "Hostel",
     construction: "Construction",
     industrial: "Industrial",
+    aerial : "Aerial Photo",
+    threed : "3D models",
     choose_service: "Choose a service",
     discover_services: "Discover the services we are offering by clicking ",
     discover_here: "here",
@@ -175,7 +177,7 @@ const translations = {
     get_started: "Commencez aujourd'hui",
     who_we_are: "Qui sommes-nous ?",
     company_description:
-      " est une entreprise de production vidéo basée en région parisienne. Nous sommes spécialisés dans les vidéos de visite en drone pour l'immobilier, les entreprises, les hôtels, les bureaux, et bien plus encore !",
+      " est une entreprise de production vidéo basée à Toulouse (en France donc). Nous sommes spécialisés dans les visite en drone de biens immobiliers, d'entreprises, hôtels, de bureaux, et bien plus encore !",
     years_flying_drones: "Pilote de drone depuis plus de 5 ans",
     liability_insurance: "Assurance responsabilité civile professionnelle",
     video_montage: "Montage vidéo et effets sonores",
@@ -214,6 +216,8 @@ const translations = {
     hostel: "Hôtel",
     construction: "Chantiers",
     industrial: "Industriel",
+    aerial : "Prise de Vue Aérienne",
+    threed : "Modèles 3D",
     choose_service: "Choisissez un service",
     discover_services: "Découvrez les services que nous proposons en cliquant ",
     discover_here: "ici !",
@@ -276,19 +280,19 @@ const translations = {
     aerial_3d_title:
       "Au-delà des vols intérieurs : Photographie aérienne & Modélisation 3D",
     aerial_3d_subtitle:
-      "Nous ne volons pas seulement en intérieur. Découvrez notre gamme complète de services de drone, incluant la photographie aérienne époustouflante et des solutions avancées de modélisation 3D.",
+      "Nous ne volons pas seulement en intérieur. Découvrez notre gamme complète de services de drone, incluant la photographie aérienne et des solutions avancées de modélisation 3D.",
 
     aerial_photography_title: "Photographie Aérienne",
     aerial_photography_description:
-      "Capturez des vues aériennes à couper le souffle de votre propriété ou de votre lieu avec nos services professionnels de drone en extérieur. Parfait pour mettre en valeur des paysages, des bâtiments et des propriétés sous des angles uniques que la photographie au sol ne peut tout simplement pas atteindre.",
+      "Nous capturons également des vues aériennes à couper le souffle de votre bien. Parfait pour mettre en valeur des paysages, des bâtiments et des propriétés sous des angles uniques que la photographie au sol ne peut tout simplement pas atteindre.",
 
     exterior_3d_title: "Modèles 3D Extérieurs",
     exterior_3d_description:
-      "Grâce à des techniques avancées de photogrammétrie, nous pouvons créer des modèles 3D détaillés d'extérieurs de bâtiments, de chantiers de construction et de paysages. Ces modèles fournissent des mesures précises, des capacités de visualisation et peuvent être intégrés sur votre site web pour une visualisation interactive.",
+      "Grâce à des techniques avancées de photogrammétrie, nous pouvons créer des modèles 3D détaillés d'extérieurs tels que des bâtiments, des chantiers de construction et des paysages. Ces modèles fournissent des mesures précises et peuvent être intégrés sur votre site web pour une visualisation interactive.",
 
     interior_3d_title: "Numérisation LIDAR d'Intérieur",
     interior_3d_description:
-      "Notre technologie LIDAR de pointe crée des modèles 3D précis des espaces intérieurs. Ces modèles peuvent être utilisés pour des visites virtuelles, des mesures précises, la planification du placement des meubles et la visualisation des rénovations. Parfait pour l'immobilier, l'architecture et la décoration d'intérieur.",
+      "La technologie LIDAR crée des modèles 3D précis des espaces intérieurs. Ces modèles peuvent être utilisés pour dresser un plan de sol précis hébergable sur la [description de votre annonce](/annonce) ou la planification du placement des meubles par exemple. ",
 
     learn_more_cta: "En savoir plus sur nos services 3D",
 

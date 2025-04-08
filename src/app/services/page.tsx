@@ -21,7 +21,7 @@ const Services = () => {
                 <h2 className="text-lg font-semibold">
                   {translate(service.key + "_title")}
                 </h2>
-                <p className="text-gray-600">
+                <p className="text-gray-600 min-h-12">
                   {translate(service.key + "_description")}
                 </p>
               </div>
@@ -34,14 +34,14 @@ const Services = () => {
                   width={600}
                 />
               </div>
-              <div className="p-4 flex justify-between text-xs text-gray-600">
+              <div className="p-4 flex justify-between text-sm text-gray-600">
                 <div>
-                  <p>Duration:</p>
-                  <p className="font-medium">+ {service.duration} min</p>
+                  <p>Duration</p>
+                  <p className="font-semibold text-primary">+ {service.duration} min</p>
                 </div>
                 <div>
-                  <p>Price:</p>
-                  <p className="font-medium">{service.price}€</p>
+                  <p>Price</p>
+                  <p className="font-semibold text-primary">{service.price}€</p>
                 </div>
               </div>
             </div>

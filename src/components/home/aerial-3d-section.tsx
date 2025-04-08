@@ -1,10 +1,11 @@
 "use client";
 
 import { motion } from "motion/react";
-import { CuboidIcon as Cube, DrillIcon as Drone, Mountain } from "lucide-react";
+import {LandPlot, Mountain, Camera } from "lucide-react";
 import translate from "@/lib/locales/function";
 import Image from "next/image";
 import Link from "next/link";
+import Markdown from "react-markdown";
 
 export default function Aerial3DSection() {
   return (
@@ -12,7 +13,7 @@ export default function Aerial3DSection() {
       id="aerial-3d"
       className="h-screen w-full snap-start flex items-center justify-center overflow-hidden"
     >
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 pt-12">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -39,21 +40,24 @@ export default function Aerial3DSection() {
           >
             <div className="flex items-center mb-4">
               <div className="bg-primary/10 p-3 rounded-full mr-4">
-                <Drone className="h-8 w-8 text-primary" />
+                <Camera className="h-8 w-8 text-primary" />
               </div>
               <h3 className="text-xl font-semibold">
                 {translate("aerial_photography_title")}
               </h3>
             </div>
-            <p className="text-neutral-600 dark:text-neutral-300 mb-4">
+            <span className="text-neutral-600 dark:text-neutral-300 mb-4 prose">
+            <Markdown>
               {translate("aerial_photography_description")}
-            </p>
+            </Markdown>
+            </span>
             <div className="mt-auto">
               <div className="relative h-48 w-full rounded-lg overflow-hidden">
                 <Image
                   src="/aerial-view.jpg"
                   alt={translate("aerial_photography_title")}
                   fill
+                  sizes="full"
                   className="object-cover"
                 />
               </div>
@@ -76,15 +80,18 @@ export default function Aerial3DSection() {
                 {translate("exterior_3d_title")}
               </h3>
             </div>
-            <p className="text-neutral-600 dark:text-neutral-300 mb-4">
+            <span className="text-neutral-600 dark:text-neutral-300 mb-4 prose">
+            <Markdown>
               {translate("exterior_3d_description")}
-            </p>
+            </Markdown>
+            </span>
             <div className="mt-auto">
               <div className="relative h-48 w-full rounded-lg overflow-hidden">
                 <Image
                   src="/photogrammetry.jpg"
                   alt={translate("exterior_3d_title")}
                   fill
+                  sizes="full"
                   className="object-cover"
                 />
               </div>
@@ -101,21 +108,24 @@ export default function Aerial3DSection() {
           >
             <div className="flex items-center mb-4">
               <div className="bg-primary/10 p-3 rounded-full mr-4">
-                <Cube className="h-8 w-8 text-primary" />
+                <LandPlot className="h-8 w-8 text-primary" />
               </div>
               <h3 className="text-xl font-semibold">
                 {translate("interior_3d_title")}
               </h3>
             </div>
-            <p className="text-neutral-600 dark:text-neutral-300 mb-4">
-              {translate("interior_3d_description")}
-            </p>
+            <span className="text-neutral-600 dark:text-neutral-300 mb-4 prose">
+            <Markdown>
+            {translate("interior_3d_description")}
+          </Markdown>
+            </span>
             <div className="mt-auto">
               <div className="relative h-48 w-full rounded-lg overflow-hidden">
                 <Image
-                  src="/lidar-scan.jpg"
+                  src="/floor-plan.jpg"
                   alt={translate("interior_3d_title")}
                   fill
+                  sizes="full"
                   className="object-cover"
                 />
               </div>

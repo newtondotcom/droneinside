@@ -73,6 +73,8 @@ export default function ContactPage() {
     { value: "hostel", label: translate("hostel") },
     { value: "construction", label: translate("construction") },
     { value: "industrial", label: translate("industrial") },
+    { value: "threed", label: translate("threed") },
+    { value: "aerial", label: translate("aerial") },
   ];
 
   return (

@@ -29,7 +29,7 @@ export default function Header() {
         )}
       >
         <Link className="flex items-center gap-2" href="/">
-          <Image src="/logo.jpg" alt="DronInside" width={120} height={32} />
+          <Image src="/logo.jpg" alt="DronInside" width={120} height={40} />
         </Link>
 
         <nav

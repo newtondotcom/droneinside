@@ -19,14 +19,14 @@ export default function Portfolio() {
                 className="block dark:hidden"
                 animationStyle="from-center"
                 videoSrc={`https://www.youtube.com/embed/${video.id}`}
-                thumbnailSrc="/construction.jpeg"
+                thumbnailSrc="/construction.jpg"
                 thumbnailAlt="Hero Video"
               />
               <HeroVideoDialog
                 className="hidden dark:block"
                 animationStyle="from-center"
                 videoSrc={`https://www.youtube.com/embed/${video.id}`}
-                thumbnailSrc="/construction.jpeg"
+                thumbnailSrc="/construction.jpg"
                 thumbnailAlt="Hero Video"
               />
             </div>

@@ -54,7 +54,7 @@ export default function ServicesSection() {
         </div>
         <div className="hidden w-1/2 md:block">
           <Image
-            src="/construction.jpeg"
+            src="/construction.jpg"
             width={800}
             height={600}
             alt="header"

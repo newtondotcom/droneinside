@@ -62,7 +62,7 @@ export default function TypingAnimation({
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
       >
-        <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-primary/80 space-y-8">
+        <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-primary/80 space-y-8 text-shadow-lg/30">
           {sentences.slice(0, currentSentenceIndex).map((sentence, index) => (
             <React.Fragment key={index}>
               <div>{sentence}</div>

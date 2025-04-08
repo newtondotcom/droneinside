@@ -7,11 +7,10 @@ export default function AboutSection() {
   return (
     <section
       id="about"
-      className="h-screen w-full snap-start flex items-center justify-center"
+      className="h-screen w-full snap-start flex items-center justify-center relative flex h-full w-full flex-col overflow-hidden rounded-md bg-white/[0.96] dark:bg-black/[0.96] md:items-center md:justify-center"
     >
-      <div className="relative flex h-full w-full flex-col overflow-hidden rounded-md bg-white/[0.96] dark:bg-black/[0.96] md:items-center md:justify-center">
         <Spotlight />
-        <div className="relative z-10 mx-auto w-full max-w-7xl p-4 pt-20 md:pt-0">
+        <div className="flex flex-col relative z-10 mx-auto w-full max-w-7xl p-4 pt-20 md:pt-0">
           <h1 className="bg-gradient-to-b from-neutral-400 to-neutral-700 bg-clip-text text-center text-4xl font-bold text-transparent dark:from-neutral-50 dark:to-neutral-400 md:text-7xl">
             {translate("who_we_are")}
           </h1>
@@ -26,7 +25,6 @@ export default function AboutSection() {
             </a>
           </div>
         </div>
-      </div>
     </section>
   );
 }

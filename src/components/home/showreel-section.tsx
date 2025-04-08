@@ -15,19 +15,19 @@ export default function ShowreelSection() {
         <div className="mb-2 flex self-center bg-gradient-to-b from-primary to-primary-light bg-clip-text text-center text-4xl font-bold text-transparent md:text-7xl">
           Showreel
         </div>
-        <div className="relative w-1/2">
+        <div className="relative w-full px-6 md:w-1/2">
           <HeroVideoDialog
             className="block dark:hidden"
             animationStyle="from-center"
             videoSrc={`https://www.youtube.com/embed/${videoId}`}
-            thumbnailSrc="/construction.jpeg"
+            thumbnailSrc="/construction.jpg"
             thumbnailAlt="Hero Video"
           />
           <HeroVideoDialog
             className="hidden dark:block"
             animationStyle="from-center"
             videoSrc={`https://www.youtube.com/embed/${videoId}`}
-            thumbnailSrc="/construction.jpeg"
+            thumbnailSrc="/construction.jpg"
             thumbnailAlt="Hero Video"
           />
         </div>

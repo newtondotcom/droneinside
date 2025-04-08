@@ -10,12 +10,32 @@ import { cn } from "@/lib/utils";
 import links from "@/lib/data/links";
 import Image from "next/image";
 import translate from "@/lib/locales/function";
+import { motion } from "framer-motion";
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const pathname = usePathname();
 
   const toggleMobileMenu = () => setMobileMenuOpen((prev) => !prev);
+
+  const mobileMenuVariants = {
+    open: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        type: "spring",
+        stiffness: 200,
+        damping: 24,
+      },
+    },
+    closed: {
+      opacity: 0,
+      y: -20,
+      transition: {
+        duration: 0.2,
+      },
+    },
+  };
 
   return (
     <>
@@ -68,24 +88,28 @@ export default function Header() {
         </Button>
       </header>
 
-      {mobileMenuOpen && (
-        <nav
-          id="mobile-menu"
-          className="fixed top-16 left-0 w-full md:hidden flex flex-col gap-4 p-4 border-b bg-white shadow-md dark:bg-background dark:border-border"
-          aria-label="Mobile navigation"
-        >
-          {links.map(({ path, key }) => (
-            <Link
-              key={key}
-              href={path}
-              className="text-sm font-medium hover:underline underline-offset-4"
-              onClick={toggleMobileMenu}
-            >
-              {translate(key)}
-            </Link>
-          ))}
-        </nav>
-      )}
+      <motion.nav
+        id="mobile-menu"
+        initial="closed"
+        animate={mobileMenuOpen ? "open" : "closed"}
+        variants={mobileMenuVariants}
+        className="fixed top-16 left-0 w-full md:hidden flex flex-col gap-4 p-4 border-b bg-white shadow-md dark:bg-background dark:border-border bg-primary mt-4 items-center"
+        aria-label="Mobile navigation"
+      >
+        {links.map(({ path, key }) => (
+          <Link
+            key={key}
+            href={path}        
+            className={cn(
+              "text-sm font-semibold",
+              pathname === path && "text-primary underline underline-offset-4",
+            )}
+            onClick={toggleMobileMenu}
+          >
+            {translate(key)}
+          </Link>
+        ))}
+      </motion.nav>
     </>
   );
 }

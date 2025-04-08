@@ -25,5 +25,3 @@
 - Description
 
 ## Plausibleeeeeee
-
-## Style opening header on mobile

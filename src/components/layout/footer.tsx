@@ -2,9 +2,9 @@
 import links from "@/lib/data/links";
 import translate from "@/lib/locales/function";
 import { cn } from "@/lib/utils";
-import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import Logo from "@/components/ui/logo";
 
 const Footer = () => {
   const pathname = usePathname();
@@ -15,13 +15,7 @@ const Footer = () => {
     <footer className="flex snap-none snap-align-none">
       <div className="mx-auto max-w-5xl mt-4 px-4 py-16 sm:px-6 lg:px-8">
         <div className="flex justify-center">
-          <Image
-            className="h-8 w-auto sm:h-10"
-            src="/logo.jpg"
-            alt="DroneInside"
-            width={120}
-            height={32}
-          />
+          <Logo />
         </div>
 
         <p className="mx-auto mt-6 max-w-md text-center leading-relaxed text-gray-500">

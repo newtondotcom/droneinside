@@ -50,8 +50,8 @@ const translations = {
     hostel: "Hostel",
     construction: "Construction",
     industrial: "Industrial",
-    aerial : "Aerial Photo",
-    threed : "3D models",
+    aerial: "Aerial Photo",
+    threed: "3D models",
     choose_service: "Choose a service",
     discover_services: "Discover the services we are offering by clicking ",
     discover_here: "here",
@@ -216,8 +216,8 @@ const translations = {
     hostel: "Hôtel",
     construction: "Chantiers",
     industrial: "Industriel",
-    aerial : "Prise de Vue Aérienne",
-    threed : "Modèles 3D",
+    aerial: "Prise de Vue Aérienne",
+    threed: "Modèles 3D",
     choose_service: "Choisissez un service",
     discover_services: "Découvrez les services que nous proposons en cliquant ",
     discover_here: "ici !",
@@ -277,8 +277,7 @@ const translations = {
       "Capturez et partagez l'avancement de vos projets de construction comme jamais auparavant !",
 
     // New translations for aerial and 3D section
-    aerial_3d_title:
-      "Au-delà des vols intérieurs : Photographie aérienne & Modélisation 3D",
+    aerial_3d_title: "Au-delà des vols intérieurs",
     aerial_3d_subtitle:
       "Nous ne volons pas seulement en intérieur. Découvrez notre gamme complète de services de drone, incluant la photographie aérienne et des solutions avancées de modélisation 3D.",
 

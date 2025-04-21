@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import translate from "@/lib/locales/function";
 import { RealEstateModal } from "@/components/ui/real-estate-modal";
+import { Button } from "@/components/ui/button";
 
 export default function ServicesSection() {
   return (
@@ -39,11 +40,8 @@ export default function ServicesSection() {
               {translate("video_text")}
             </p>
             <div className="mt-4 md:mt-8">
-              <Link
-                href={"/contact"}
-                className="inline-flex h-10 items-center justify-center rounded-md bg-primary px-8 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
-              >
-                {translate("get_started")}
+              <Link href={"/contact"}>
+                <Button>{translate("get_started")}</Button>
               </Link>
             </div>
 

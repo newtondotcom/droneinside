@@ -13,6 +13,7 @@ import { cn } from "@/lib/utils";
 import AnimatedGradientText from "@/components/ui/animated-gradient-text";
 import translate from "@/lib/locales/function";
 import Link from "next/link";
+import { Button } from "@/components/ui/button";
 
 export function RealEstateModal() {
   const features = [
@@ -104,7 +105,7 @@ export function RealEstateModal() {
             </div>
             <div className="py-10 flex flex-col gap-y-6 max-w-lg mx-auto">
               {features.map((feature, idx) => (
-                <div key={idx} className="flex items-start">
+                <div key={idx} className="flex items-center">
                   <FeatureIcon name={feature.icon} />
                   <div className="ml-4">
                     <h5 className="font-semibold text-neutral-800 dark:text-neutral-100">
@@ -119,13 +120,13 @@ export function RealEstateModal() {
             </div>
           </ModalContent>
           <ModalFooter className="gap-4">
-            <button className="px-2 py-1 bg-gray-200 text-black dark:bg-black dark:border-black dark:text-white border border-gray-300 rounded-md text-sm w-28">
+            <Button className="px-2 py-1" variant={"outline"}>
               {translate("cancel_button")}
-            </button>
+            </Button>
             <Link href="/contact">
-              <button className="bg-primary text-white dark:bg-primary dark:text-white text-sm px-2 py-1 rounded-md border border-primary w-28">
+              <Button className="px-2 py-1">
                 {translate("contact_us_button")}
-              </button>
+              </Button>
             </Link>
           </ModalFooter>
         </ModalBody>

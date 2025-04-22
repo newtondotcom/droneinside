@@ -5,6 +5,7 @@ import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Logo from "@/components/ui/logo";
+import { Separator } from "@/components/ui/separator";
 
 const Footer = () => {
   const pathname = usePathname();
@@ -12,7 +13,8 @@ const Footer = () => {
     return <></>;
   }
   return (
-    <footer className="flex snap-none snap-align-none">
+    <footer className="flex flex-col snap-none snap-align-none">
+      < Separator />
       <div className="mx-auto max-w-5xl mt-4 px-4 py-16 sm:px-6 lg:px-8">
         <div className="flex justify-center">
           <Logo />

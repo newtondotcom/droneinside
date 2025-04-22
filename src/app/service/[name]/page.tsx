@@ -12,11 +12,11 @@ import { Button } from "@/components/ui/button";
 import { motion } from "motion/react";
 import { Play, Video } from "lucide-react";
 import { ServiceType } from "@/lib/data/services";
-import { useRouter } from "next/router";
+import { usePathname  } from "next/navigation";
 
 export default function ServicePage() {
-  const router = useRouter();
-  const serviceName = router.query.name as ServiceType;
+  const pathname = usePathname();
+  const serviceName = pathname.split("/").pop() as ServiceType;
 
   // Validate service type
   if (!Object.values(ServiceType).includes(serviceName)) {
@@ -62,7 +62,7 @@ export default function ServicePage() {
       <div className="mt-12 text-center">
         <p className="text-lg mb-6">{translate("interested_in_service")}</p>
         <Link href="/contact">
-          <Button size="lg" className="font-medium">
+          <Button className="font-semibold text-lg py-4 px-6">
             {translate("contact_us")}
           </Button>
         </Link>

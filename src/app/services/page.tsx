@@ -21,7 +21,7 @@ const Services = () => {
                 <h2 className="text-lg font-semibold">
                   {translate(service.key + "_title")}
                 </h2>
-                <p className="text-gray-600 min-h-12">
+                <p className="text-gray-600 min-h-16">
                   {translate(service.key + "_description")}
                 </p>
               </div>
@@ -30,17 +30,17 @@ const Services = () => {
                   alt={service.key + "_title"}
                   src={service.img}
                   className="w-full object-cover"
-                  height={896}
-                  width={600}
+                  height={1024}
+                  width={576}
                 />
               </div>
               <div className="p-4 flex justify-between text-sm text-gray-600">
                 <div>
-                  <p>Duration</p>
+                  <p>{translate("services_duration")}</p>
                   <p className="font-semibold text-primary">+ {service.duration} min</p>
                 </div>
                 <div>
-                  <p>Price</p>
+                  <p>{translate("services_price")}</p>
                   <p className="font-semibold text-primary">{service.price}€</p>
                 </div>
               </div>

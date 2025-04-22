@@ -136,7 +136,7 @@ export default function Aerial3DSection() {
           className="mt-12 text-center"
         >
           <Link href="/contact">
-            <Button>
+            <Button  className="font-semibold text-lg py-4 px-6">
               {translate("learn_more_cta")}
               <ChevronRight />
             </Button>

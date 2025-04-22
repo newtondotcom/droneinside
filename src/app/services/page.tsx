@@ -21,11 +21,11 @@ const Services = () => {
                 <h2 className="text-lg font-semibold">
                   {translate(service.key + "_title")}
                 </h2>
-                <p className="text-gray-600 min-h-16">
+                <p className="text-gray-600 min-h-20">
                   {translate(service.key + "_description")}
                 </p>
               </div>
-              <div className="px-1">
+              <div className="px-2">
                 <Image
                   alt={service.key + "_title"}
                   src={service.img}

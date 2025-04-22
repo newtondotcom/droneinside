@@ -41,7 +41,7 @@ export default function ServicesSection() {
             </p>
             <div className="mt-4 md:mt-8">
               <Link href={"/contact"}>
-                <Button>{translate("get_started")}</Button>
+                <Button  className="font-semibold text-lg py-4 px-6">{translate("get_started")}</Button>
               </Link>
             </div>
 

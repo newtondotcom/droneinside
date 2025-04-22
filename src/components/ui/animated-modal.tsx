@@ -112,13 +112,13 @@ export const ModalBody = ({ children, className }: ModalBodyProps) => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1, backdropFilter: "blur(10px)" }}
           exit={{ opacity: 0, backdropFilter: "blur(0px)" }}
-          className="fixed [perspective:800px] [transform-style:preserve-3d] inset-0 h-full w-full flex items-center justify-center z-50"
+          className="fixed [perspective:800px] [transform-style:preserve-3d] inset-0 h-full w-full flex items-center justify-center z-40"
         >
           <Overlay />
           <motion.div
             ref={modalRef}
             className={cn(
-              "min-h-[50%] max-h-[90%] md:max-w-[40%] bg-white dark:bg-neutral-950 border border-transparent dark:border-neutral-800 md:rounded-2xl relative z-50 flex flex-col flex-1 overflow-hidden",
+              "min-h-[50%] max-h-[90%] md:max-w-[40%] bg-white dark:bg-neutral-950 border border-transparent dark:border-neutral-800 md:rounded-2xl relative z-40 flex flex-col flex-1 overflow-hidden",
               className,
             )}
             initial={{
@@ -180,7 +180,7 @@ const Overlay = ({ className }: OverlayProps) => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1, backdropFilter: "blur(10px)" }}
       exit={{ opacity: 0, backdropFilter: "blur(0px)" }}
-      className={`fixed inset-0 h-full w-full bg-black bg-opacity-50 z-50 ${className}`}
+      className={`fixed inset-0 h-full w-full bg-black bg-opacity-50 z-40 ${className}`}
     />
   );
 };

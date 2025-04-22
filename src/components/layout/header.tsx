@@ -9,7 +9,7 @@ import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import links from "@/lib/data/links";
 import translate from "@/lib/locales/function";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import Logo from "@/components/ui/logo";
 
 export default function Header() {

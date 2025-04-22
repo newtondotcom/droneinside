@@ -2,7 +2,7 @@
 
 import TypingAnimation from "@/components/animations/typing-animation";
 import { ChevronsDown } from "lucide-react";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { useState, useEffect } from "react";
 
 export default function HeroSection() {

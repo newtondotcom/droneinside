@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "motion/react";
+import { motion, HTMLMotionProps} from "motion/react";
 import { LandPlot, Mountain, Camera, ChevronRight } from "lucide-react";
 import translate from "@/lib/locales/function";
 import Image from "next/image";
@@ -15,21 +15,23 @@ type ServiceCardProps = {
   description: string;
   imageSrc: string;
   animation: {
-    initial: object;
-    animate: object;
-    transition: object;
+    initial: HTMLMotionProps<"div">["initial"];
+    animate: HTMLMotionProps<"div">["animate"];
+    transition: HTMLMotionProps<"div">["transition"];
   };
 };
 
-const ServiceCard = ({
+const ServiceCard: React.FC<ServiceCardProps> = ({
   icon,
   title,
   description,
   imageSrc,
   animation,
-}: ServiceCardProps) => (
+}) => (
   <motion.div
-    {...animation}
+    initial={animation.initial}
+    animate={animation.animate}
+    transition={animation.transition}
     viewport={{ once: true }}
     className="flex flex-col"
   >
@@ -63,7 +65,7 @@ const ServiceCard = ({
 );
 
 export default function Aerial3DSection() {
-  const services = [
+  const services: ServiceCardProps[] = [
     {
       icon: <Camera className="h-8 w-8 text-primary" />,
       title: translate("aerial_photography_title"),

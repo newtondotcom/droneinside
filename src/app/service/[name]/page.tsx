@@ -9,7 +9,7 @@ import { cn } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { Play, Video } from "lucide-react";
 import { ServiceType } from "@/lib/data/services";
 import { useRouter } from "next/router";

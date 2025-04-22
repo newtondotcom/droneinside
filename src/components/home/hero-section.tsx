@@ -16,7 +16,7 @@ export default function HeroSection() {
     // Set onScreen to true after 12 seconds
     const timer = setTimeout(() => {
       setOnScreen(true);
-    }, 8000);
+    }, 4200);
 
     // Cleanup the timer on component unmount
     return () => clearTimeout(timer);
@@ -45,7 +45,7 @@ export default function HeroSection() {
     >
       <TypingAnimation
         sentences={typingTexts}
-        typingSpeed={70}
+        typingSpeed={45}
         delayBetweenSentences={50}
       />
       <motion.div

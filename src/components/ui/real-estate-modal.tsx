@@ -35,10 +35,10 @@ export function RealEstateModal() {
   ];
 
   const images = [
-    "/re-sample-1.jpg",
-    "/re-sample-2.jpg",
-    "/re-sample-3.jpg",
-    "/re-sample-4.jpg",
+    "/example-inside.jpg",
+    "/example-outside.jpg",
+    "/example-3d.jpg",
+    "/example-photogrammetry.jpg",
   ];
 
   return (

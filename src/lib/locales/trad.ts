@@ -303,7 +303,7 @@ const translations = {
 
     re_feature_1_title: "Perspectives Uniques",
     re_feature_1_desc:
-      "Nos visites en drone offrent des parcours fluides avec des angles et des perspectives uniques que les vidéos traditionnelles ne peuvent pas égaler, donnant aux acheteurs potentiels une véritable idée de la circulation et de l'espace de la propriété.",
+      "Nos visites en drone offrent des parcours fluides avec des angles et des perspectives uniques que les vidéos traditionnelles ne peuvent pas égaler, donnant aux acheteurs potentiels une véritable idée de l'agencement et du volume disponible de la propriété.",
 
     re_feature_2_title: "Plans d'étage avec calculs automatiques",
     re_feature_2_desc:
@@ -311,7 +311,7 @@ const translations = {
 
     re_feature_3_title: "Modèles 3D pour maisons",
     re_feature_3_desc:
-      "Pour les maisons, nous pouvons créer des modèles 3D interactifs à l'aide de la photogrammétrie, permettant aux acheteurs potentiels d'explorer la propriété sous tous les angles, à l'intérieur comme à l'extérieur, avant de planifier une visite en personne.",
+      "Pour les maisons, nous pouvons créer des modèles 3D interactifs à l'aide de la photogrammétrie, permettant aux acheteurs potentiels d'explorer la propriété sous tous les angles avant de planifier une visite en personne.",
 
     // Service page translations
     related_videos: "Vidéos associées",

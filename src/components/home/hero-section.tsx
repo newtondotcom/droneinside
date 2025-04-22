@@ -7,9 +7,7 @@ import { useState, useEffect } from "react";
 
 export default function HeroSection() {
   const typingTexts = [
-    "Chez Droninside, nous faisons voler des drones en intérieur.",
-    "Mais pourquoi faire nous diriez vous ?",
-    "Pour débloquer de nouvelles perspectives !",
+    "Chez Droninside, nous faisons voler des drones en intérieur pour débloquer de nouvelles perspectives.",
   ];
 
   const [onScreen, setOnScreen] = useState(false);
@@ -47,7 +45,7 @@ export default function HeroSection() {
     >
       <TypingAnimation
         sentences={typingTexts}
-        typingSpeed={80}
+        typingSpeed={70}
         delayBetweenSentences={50}
       />
       <motion.div

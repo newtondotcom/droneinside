@@ -25,7 +25,7 @@ const Footer = () => {
         <ul className="mt-12 flex flex-wrap justify-center gap-6 md:gap-8 lg:gap-12">
           {links.map(({ path, key }) => (
             <li key={key}>
-              <Link href="path">
+              <Link href={path}>
                 <button
                   className={cn(
                     `text-gray-400 transition hover:text-primary`,

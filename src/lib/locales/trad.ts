@@ -149,7 +149,7 @@ const translations = {
       "We don't have any videos for this service type yet. Contact us to be the first to showcase your property with our professional drone services!",
     request_service: "Request This Service",
     interested_in_service:
-      "Interested in this service? Contact us for a personalized quote!",
+      "Interested in this service?",
 
     contact_page_description:
       "Have a question or want to book a service? Fill out the form below and we'll get back to you as soon as possible.",
@@ -314,13 +314,13 @@ const translations = {
       "Pour les maisons, nous pouvons créer des modèles 3D interactifs à l'aide de la photogrammétrie, permettant aux acheteurs potentiels d'explorer la propriété sous tous les angles, à l'intérieur comme à l'extérieur, avant de planifier une visite en personne.",
 
     // Service page translations
-    related_videos: "Vidéos Associées",
-    no_videos_title: "Pas Encore de Vidéos Disponibles",
+    related_videos: "Vidéos associées",
+    no_videos_title: "Pas encore de vidéos disponibles",
     no_videos_message:
       "Nous n'avons pas encore de vidéos pour ce type de service. Contactez-nous pour être le premier à mettre en valeur votre propriété avec nos services professionnels de drone !",
-    request_service: "Demander Ce Service",
+    request_service: "Demander ce service",
     interested_in_service:
-      "Intéressé par ce service ? Contactez-nous pour un devis personnalisé !",
+      "Intéressé par ce service ?",
 
     contact_page_description:
       "Vous avez une question ou souhaitez réserver un service ? Remplissez le formulaire ci-dessous et nous vous répondrons dans les plus brefs délais.",

@@ -23,3 +23,10 @@
 - Plan 2d interactif avec des chiffres
 - Modèle 3D interactif de l'extérieur
 - Description
+
+# Long term : 
+
+- create a booking platform online
+
+- page to hire drone pilots
+

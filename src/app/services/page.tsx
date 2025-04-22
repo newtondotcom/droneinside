@@ -25,11 +25,11 @@ const Services = () => {
                   {translate(service.key + "_description")}
                 </p>
               </div>
-              <div className="px-1 rounded-sm">
+              <div className="px-1">
                 <Image
                   alt={service.key + "_title"}
                   src={service.img}
-                  className="w-full object-cover"
+                  className="w-full object-cover rounded-sm"
                   height={1024}
                   width={576}
                 />

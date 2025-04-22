@@ -16,7 +16,7 @@ export default function HeroSection() {
     // Set onScreen to true after 12 seconds
     const timer = setTimeout(() => {
       setOnScreen(true);
-    }, 12000);
+    }, 8000);
 
     // Cleanup the timer on component unmount
     return () => clearTimeout(timer);

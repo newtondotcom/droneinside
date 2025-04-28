@@ -14,6 +14,12 @@ import AnimatedGradientText from "@/components/ui/animated-gradient-text";
 import translate from "@/lib/locales/function";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip"
 
 export function RealEstateModal() {
   const features = [
@@ -35,10 +41,22 @@ export function RealEstateModal() {
   ];
 
   const images = [
-    "/example-inside.jpg",
-    "/example-outside.jpg",
-    "/example-3d.jpg",
-    "/example-photogrammetry.jpg",
+    {
+      alt : "Interior scene",
+      source :  "/indoor.jpg",
+    },   
+     {
+      alt : "Outdoor scene",
+      source :  "/outdoor.jpg",
+    },
+    {
+      alt : "3d model reconstruced",
+      source :  "/3d-recontruction.jpg",
+    },
+    {
+      alt : "Photogrammetry",
+      source :  "/photogrammetry.jpg",
+    }
   ];
 
   return (
@@ -75,6 +93,7 @@ export function RealEstateModal() {
               </span>
             </h4>
             <div className="flex justify-center items-center">
+              
               {images.map((image, idx) => (
                 <motion.div
                   key={"images" + idx}
@@ -93,13 +112,22 @@ export function RealEstateModal() {
                   }}
                   className="rounded-xl -mr-4 mt-4 p-1 bg-white dark:bg-neutral-800 dark:border-neutral-700 border border-neutral-100 shrink-0 overflow-hidden"
                 >
+                <TooltipProvider>
+                  <Tooltip>
+                    <TooltipTrigger asChild>
                   <Image
-                    src={image || "/placeholder.svg"}
-                    alt={`Real estate sample ${idx + 1}`}
+                    src={image.source}
+                    alt={image.alt}
                     width="500"
                     height="500"
                     className="rounded-lg h-20 w-20 md:h-40 md:w-40 object-cover shrink-0"
                   />
+                  </TooltipTrigger>
+                  <TooltipContent>
+            <p>Add to library</p>
+          </TooltipContent>
+        </Tooltip>
+      </TooltipProvider>
                 </motion.div>
               ))}
             </div>

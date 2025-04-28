@@ -14,8 +14,6 @@
 
 ## Use simpleicons.org for footer icons, add link for BluSky also
 
-## Ajouter une phrase de redirection en bas de chaque page vers la page suivante
-
 ## Utiliser le composant Title dans la section aerial-3d.
 
 ## Créer la page type d'une annonce immobilière

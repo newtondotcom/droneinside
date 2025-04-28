@@ -54,6 +54,14 @@ export default function FAQ() {
           </AccordionItem>
         ))}
       </Accordion>
+
+                    <div className="mx-auto my-8 max-w-lg text-center text-base font-semibold text-neutral-700 dark:text-neutral-200">
+                      {translate("contact_redirect")}{" "}
+                      <a href="/contact" className="text-primary underline">
+                        {translate("here_button")}
+                      </a>
+                    </div>
+
     </div>
   );
 }

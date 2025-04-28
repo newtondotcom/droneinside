@@ -42,11 +42,11 @@ export function RealEstateModal() {
 
   const images = [
     {
-      alt : "Vue ntérieure",
+      alt : "Vue intérieure",
       source :  "/indoor.jpg",
     },   
      {
-      alt : "Vue exréieure",
+      alt : "Vue extérieure",
       source :  "/outdoor.jpg",
     },
     {

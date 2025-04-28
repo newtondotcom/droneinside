@@ -6,7 +6,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Logo from "@/components/ui/logo";
 import { Separator } from "@/components/ui/separator";
-import { siGithub, siInstagram, siLinkedin } from 'simple-icons';
+import { siGithub, siInstagram} from 'simple-icons';
 
 const Footer = () => {
   const pathname = usePathname();

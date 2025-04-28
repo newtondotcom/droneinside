@@ -21,7 +21,7 @@ export default function AboutSection() {
         <div className="mx-auto mt-8 max-w-lg text-center text-base font-semibold text-neutral-700 dark:text-neutral-200">
           {translate("discover_services")}{" "}
           <a href="/services" className="text-primary underline">
-            {translate("discover_here")}
+            {translate("here_button")}
           </a>
         </div>
       </div>

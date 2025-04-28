@@ -54,7 +54,7 @@ const translations = {
     threed: "3D models",
     choose_service: "Choose a service",
     discover_services: "Discover the services we are offering by clicking ",
-    discover_here: "here",
+    here_button: "here",
     q1_question:
       "What are the advantages of a drone tour compared to a regular video tour?",
     q1_answer:
@@ -177,7 +177,7 @@ const translations = {
     get_started: "Commencez aujourd'hui",
     who_we_are: "Qui sommes-nous ?",
     company_description:
-      " est une entreprise de production vidéo basée à Toulouse (en France donc). Nous sommes spécialisés dans les visite en drone de biens immobiliers, d'entreprises, hôtels, de bureaux, et bien plus encore !",
+      " est une entreprise de production vidéo basée à Toulouse. Nous sommes spécialisés dans les visite en drone de biens immobiliers, d'entreprises, hôtels, de bureaux, et bien plus encore !",
     years_flying_drones: "Pilote de drone depuis plus de 5 ans",
     liability_insurance: "Assurance responsabilité civile professionnelle",
     video_montage: "Montage vidéo et effets sonores",
@@ -220,7 +220,7 @@ const translations = {
     threed: "Modèles 3D",
     choose_service: "Choisissez un service",
     discover_services: "Découvrez les services que nous proposons en cliquant ",
-    discover_here: "ici !",
+    here_button: "ici !",
     q1_question:
       "Quels sont les avantages d'une visite en drone par rapport à une visite vidéo classique ?",
     q1_answer:
@@ -305,13 +305,13 @@ const translations = {
     re_feature_1_desc:
       "Nos visites en drone offrent des parcours fluides avec des angles et des perspectives uniques que les vidéos traditionnelles ne peuvent pas égaler, donnant aux acheteurs potentiels une véritable idée de l'agencement et du volume disponible de la propriété.",
 
-    re_feature_2_title: "Plans d'étage avec calculs automatiques",
+    re_feature_2_title: "Plans d'étage et modèle 3D",
     re_feature_2_desc:
       "Nous créons des plans d'étage détaillés avec des calculs automatiques de surface, aidant les acheteurs à comprendre la disposition et les dimensions de la propriété en un coup d'œil.",
 
     re_feature_3_title: "Modèles 3D pour maisons",
     re_feature_3_desc:
-      "Pour les maisons, nous pouvons créer des modèles 3D interactifs à l'aide de la photogrammétrie, permettant aux acheteurs potentiels d'explorer la propriété sous tous les angles avant de planifier une visite en personne.",
+      "Pour les maisons, nous pouvons créer des modèles 3D de l'extérieur à l'aide de la photogrammétrie, permettant aux acheteurs potentiels d'explorer la propriété et son terrain sous tous les angles avant de planifier une visite en personne.",
 
     // Service page translations
     related_videos: "Vidéos associées",
@@ -335,6 +335,10 @@ const translations = {
     not_found_desc:
       "Désolé, nous n'avons pas pu trouver la page que vous recherchez",
     return_home: "Retour à l'accueil",
+
+    services_redirect : "Intéréssé par nos prestations ? Découvrez nos précédentes réalisations en cliquant",
+    portfolio_redirect : "Un doute, une hésitation ? Vous pouvez consulter notre FAQ en cliquant",
+    contact_redirect : "Ceci ne répond pas à votre question ? N'hésitez pas à nous contacter en cliquant",
   },
 };
 

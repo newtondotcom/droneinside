@@ -85,7 +85,7 @@ function VideoCard({ video }: VideoCardProps) {
     >
       <div className="relative h-48 w-full">
         <Image
-          src={video.thumbnail || "/placeholder.svg?height=400&width=600"}
+          src={`https://img.youtube.com/vi/${video.id}/maxresdefault.jpg`}
           alt={translate(video.descriptionKey)}
           fill
           className="object-cover"

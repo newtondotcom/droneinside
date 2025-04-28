@@ -19,15 +19,15 @@ export default function Portfolio() {
                 className="block dark:hidden"
                 animationStyle="from-center"
                 videoSrc={`https://www.youtube.com/embed/${video.id}`}
-                thumbnailSrc="/construction.jpg"
-                thumbnailAlt="Hero Video"
+                thumbnailSrc={`https://img.youtube.com/vi/${video.id}/maxresdefault.jpg`}
+                thumbnailAlt="Projet ${video.id}"
               />
               <HeroVideoDialog
                 className="hidden dark:block"
                 animationStyle="from-center"
                 videoSrc={`https://www.youtube.com/embed/${video.id}`}
-                thumbnailSrc="/construction.jpg"
-                thumbnailAlt="Hero Video"
+                thumbnailSrc={`https://img.youtube.com/vi/${video.id}/maxresdefault.jpg`}
+                thumbnailAlt="Projet ${video.id}"
               />
             </div>
             <h2 className="text-center text-sm font-semibold text-neutral-700 mt-4">

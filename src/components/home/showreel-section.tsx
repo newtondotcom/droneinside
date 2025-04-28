@@ -20,15 +20,15 @@ export default function ShowreelSection() {
             className="block dark:hidden"
             animationStyle="from-center"
             videoSrc={`https://www.youtube.com/embed/${videoId}`}
-            thumbnailSrc="/construction.jpg"
-            thumbnailAlt="Hero Video"
+            thumbnailSrc={`https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`}
+            thumbnailAlt="Showreel Video"
           />
           <HeroVideoDialog
             className="hidden dark:block"
             animationStyle="from-center"
             videoSrc={`https://www.youtube.com/embed/${videoId}`}
-            thumbnailSrc="/construction.jpg"
-            thumbnailAlt="Hero Video"
+            thumbnailSrc={`https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`}
+            thumbnailAlt="Showreel Video"
           />
         </div>
       </GridBackground>

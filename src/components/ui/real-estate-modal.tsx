@@ -42,19 +42,19 @@ export function RealEstateModal() {
 
   const images = [
     {
-      alt : "Interior scene",
+      alt : "Vue ntérieure",
       source :  "/indoor.jpg",
     },   
      {
-      alt : "Outdoor scene",
+      alt : "Vue exréieure",
       source :  "/outdoor.jpg",
     },
     {
-      alt : "3d model reconstruced",
+      alt : "Modèle 3D",
       source :  "/3d-recontruction.jpg",
     },
     {
-      alt : "Photogrammetry",
+      alt : "Photogrammétrie",
       source :  "/photogrammetry.jpg",
     }
   ];
@@ -124,7 +124,7 @@ export function RealEstateModal() {
                   />
                   </TooltipTrigger>
                   <TooltipContent>
-            <p>Add to library</p>
+            <p>{image.alt}</p>
           </TooltipContent>
         </Tooltip>
       </TooltipProvider>

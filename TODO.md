@@ -2,6 +2,8 @@
 
 > Make on commit per point
 
+## Mobile version
+
 ## Use motion to animate sections contents on appearing, be creative with shaking, translattion along x and y axis.
 
 ## Feel free to improve my translation system, by changing the structure of the files containing the translations for example, organizing them per page

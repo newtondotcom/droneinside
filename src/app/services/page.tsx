@@ -30,8 +30,8 @@ const Services = () => {
                   alt={service.key + "_title"}
                   src={service.img}
                   className="w-full object-cover rounded-sm"
-                  height={1024}
-                  width={576}
+                  height={576}
+                  width={1024}
                 />
               </div>
               <div className="p-4 flex justify-between text-sm text-gray-600">

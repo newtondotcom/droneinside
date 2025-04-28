@@ -51,7 +51,7 @@ const Services = () => {
 
               <div className="mx-auto my-8 max-w-lg text-center text-base font-semibold text-neutral-700 dark:text-neutral-200">
                 {translate("services_redirect")}{" "}
-                <a href="/faq" className="text-primary underline">
+                <a href="/portfolio" className="text-primary underline">
                   {translate("here_button")}
                 </a>
               </div>

@@ -18,13 +18,13 @@ export default function Home() {
 
       <Separator className="hidden dark:block" />
 
-      <ShowreelSection />
-
-      <Separator className="hidden dark:block" />
-
       <Aerial3DSection />
 
       <Separator />
+
+      <ShowreelSection />
+
+      <Separator className="hidden dark:block" />
 
       <AboutSection />
     </main>

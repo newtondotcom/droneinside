@@ -6,8 +6,8 @@ import translate from "@/lib/locales/function";
 import Image from "next/image";
 import Link from "next/link";
 import Markdown from "react-markdown";
-import { NeonGradientCard } from "../magicui/neon-gradient-card";
-import { Button } from "../ui/button";
+import { NeonGradientCard } from "@/components/magicui/neon-gradient-card";
+import { Button } from "@/components/ui/button";
 
 type ServiceCardProps = {
   icon: React.ReactNode;
@@ -36,20 +36,20 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
     className="flex flex-col"
   >
     <NeonGradientCard
-      className="max-w-sm items-center justify-center text-center"
+      className="max-w-sm items-center justify-between text-center"
       neonColors={{
-        firstColor: "#ff00aa",
-        secondColor: "#00FFF1",
+        firstColor: "oklch(84.1% 0.238 128.85)",
+        secondColor: "oklch(79.2% 0.209 151.711)",
       }}
     >
       <div className="flex items-center mb-4">
-        <div className="bg-primary/10 p-3 rounded-full mr-4">{icon}</div>
+        <div className="bg-primary/10 p-2 rounded-full mr-4">{icon}</div>
         <h3 className="text-xl font-semibold">{title}</h3>
       </div>
-      <span className="text-neutral-600 dark:text-neutral-300 mb-4 prose">
+      <span className="flex text-neutral-600 dark:text-neutral-300 mb-4 prose min-h-[250px]">
         <Markdown>{description}</Markdown>
       </span>
-      <div className="mt-auto">
+      <div className="flex my-auto">
         <div className="relative h-48 w-full rounded-lg overflow-hidden">
           <Image
             src={imageSrc}
@@ -92,7 +92,7 @@ export default function Aerial3DSection() {
       icon: <LandPlot className="h-8 w-8 text-primary" />,
       title: translate("interior_3d_title"),
       description: translate("interior_3d_description"),
-      imageSrc: "/floor-plan.jpg",
+      imageSrc: "/floor-plan.png",
       animation: {
         initial: { opacity: 0, x: 50 },
         animate: { opacity: 1, x: 0 },

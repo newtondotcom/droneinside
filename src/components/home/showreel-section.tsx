@@ -12,7 +12,7 @@ export default function ShowreelSection() {
       className="h-screen w-full snap-start flex items-center justify-center"
     >
       <GridBackground>
-        <div className="mb-2 flex self-center bg-gradient-to-b from-primary to-primary-light bg-clip-text text-center text-4xl font-bold text-transparent md:text-7xl">
+        <div className="mb-4 flex self-center bg-gradient-to-b from-primary to-primary/30 bg-clip-text text-center text-4xl font-bold text-transparent md:text-7xl">
           Showreel
         </div>
         <div className="relative w-full px-6 md:w-1/2">

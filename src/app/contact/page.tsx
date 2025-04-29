@@ -27,6 +27,7 @@ import {
 } from "@/components/ui/select";
 import { CheckCircle2, Loader2 } from "lucide-react";
 import { ContactFormData, ContactFormSchema } from "@/lib/data/contact";
+import Title from "@/components/layout/title";
 
 export default function ContactPage() {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -78,22 +79,12 @@ export default function ContactPage() {
   ];
 
   return (
-    <div className="container mx-auto px-4 py-16">
-      <div className="max-w-3xl mx-auto  mt-20">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="mb-10 text-center"
-        >
-          <h1 className="text-4xl font-bold text-primary mb-4">
-            {translate("contact_us")}
-          </h1>
-          <p className="text-lg text-neutral-600 dark:text-neutral-300">
-            {translate("contact_page_description")}
-          </p>
-        </motion.div>
-
+    <div className="flex flex-col min-h-screen pt-20 items-center">
+    <Title
+      title={translate("contact_us")}
+      subtitle={translate("contact_page_description")}
+    />
+      <div className="max-w-3xl w-full pt-8">
         <AnimatePresence mode="wait">
           {formResponse.success ? (
             <motion.div

@@ -11,6 +11,7 @@ import links from "@/lib/data/links";
 import translate from "@/lib/locales/function";
 import { motion } from "motion/react";
 import Logo from "@/components/ui/logo";
+import LocalePicker from "@/components/layout/locale-picker";
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -70,7 +71,10 @@ export default function Header() {
           ))}
         </nav>
 
+        <div className="hidden md:flex items-center gap-4">
         <ThemeToggle />
+        <LocalePicker />
+        </div>
 
         <Button
           variant="ghost"

@@ -6,7 +6,7 @@ import videos from "@/lib/data/videos";
 
 export default function Portfolio() {
   return (
-    <div className="flex flex-col  mt-20">
+    <div className="flex flex-col mt-20">
       <Title
         title={translate("services_title")}
         subtitle={translate("service_subtitle")}

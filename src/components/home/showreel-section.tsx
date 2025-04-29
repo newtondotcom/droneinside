@@ -1,10 +1,16 @@
 "use client";
 
+import { motion } from "motion/react";
 import HeroVideoDialog from "@/components/magicui/hero-video-dialog";
 import GridBackground from "@/components/ui/grid-bg";
 
 export default function ShowreelSection() {
   const videoId = "TTYi8xfwReI";
+
+  const fadeInVariants = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1, transition: { duration: 1 } },
+  };
 
   return (
     <section
@@ -16,20 +22,27 @@ export default function ShowreelSection() {
           Showreel
         </div>
         <div className="relative w-full px-6 md:w-1/2">
-          <HeroVideoDialog
-            className="block dark:hidden"
-            animationStyle="from-center"
-            videoSrc={`https://www.youtube.com/embed/${videoId}`}
-            thumbnailSrc={`https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`}
-            thumbnailAlt="Showreel Video"
-          />
-          <HeroVideoDialog
-            className="hidden dark:block"
-            animationStyle="from-center"
-            videoSrc={`https://www.youtube.com/embed/${videoId}`}
-            thumbnailSrc={`https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`}
-            thumbnailAlt="Showreel Video"
-          />
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fadeInVariants}
+          >
+            <HeroVideoDialog
+              className="block dark:hidden"
+              animationStyle="from-center"
+              videoSrc={`https://www.youtube.com/embed/${videoId}`}
+              thumbnailSrc={`https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`}
+              thumbnailAlt="Showreel Video"
+            />
+            <HeroVideoDialog
+              className="hidden dark:block"
+              animationStyle="from-center"
+              videoSrc={`https://www.youtube.com/embed/${videoId}`}
+              thumbnailSrc={`https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`}
+              thumbnailAlt="Showreel Video"
+            />
+          </motion.div>
         </div>
       </GridBackground>
     </section>

@@ -22,7 +22,7 @@ import {
   
     return (
       <Select defaultValue="fr" onValueChange={onChange}>
-        <SelectTrigger className={cn("w-[60px] border-none", isPending && 'pointer-events-none opacity-60')}>
+        <SelectTrigger className={cn("w-[60px] border-none backdrop-blur-md bg-white/10 dark:bg-dark/10", isPending && 'pointer-events-none opacity-60')}>
         <Languages />
         </SelectTrigger>
         <SelectContent>

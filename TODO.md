@@ -24,13 +24,9 @@
 
 Sujets :
 
-- Explication Photogrammétrie
-- Application mesure LIDAR pour créations de modèles 3D d'intérieur, de plan d'étage etc
-- Drone FPV
-- Drones FPV en intérieur
-- Drones FPV pour l'immobillier
-- Avantages vidéos et photos dans la promotion d'un bien immobillier
+-
 
+Consignes :
 Nom du fichier URL donc doit-etre signgicifactif
 Chaque article doit être lu en 2 minutes approximativement
 Contenu diversifié en incluant des tableaux des quotes des emojis dans la mesure du possible

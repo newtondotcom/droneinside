@@ -32,7 +32,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
     initial={animation.initial}
     animate={animation.animate}
     transition={animation.transition}
-    viewport={{ once: true }}
+    viewport={{ once: false }}
     className="flex flex-col"
   >
     <NeonGradientCard

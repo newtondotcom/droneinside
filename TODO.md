@@ -61,6 +61,8 @@ Contenu diversifié en incluant des tableaux des quotes des emojis dans la mesur
 
 # Version mobile
 
+# Hero Video Dialog on mobile : use deep link
+
 # Long term : 
 
 - create a booking platform online

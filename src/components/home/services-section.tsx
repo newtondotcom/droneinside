@@ -12,7 +12,7 @@ export default function ServicesSection() {
   return (
     <section
       id="services"
-      className="h-screen w-full snap-start flex flex-col justify-center overflow-hidden px-6 align-middle"
+      className="h-screen w-full snap-start flex flex-col justify-center overflow-hidden px-6 align-middle mt-20"
     >
       <div className="hidden px-4 lg:flex">
         <Image
@@ -33,12 +33,12 @@ export default function ServicesSection() {
         />
       </div>
       <div className="flex flex-row">
-        <div className="my-auto flex h-full w-full flex-col justify-center px-10 py-8 align-middle md:w-1/2 md:py-0">
+        <div className="my-auto flex h-full w-full flex-col justify-center px-2 py-8 align-middle md:w-1/2 md:py-0">
           <div className="mx-auto max-w-xl text-center">
             <h2 className="text-2xl font-bold text-black dark:text-white md:text-3xl">
               {t("video_description")}
             </h2>
-            <p className="hidden text-black dark:text-white md:mt-4 md:block">
+            <p className="block text-black dark:text-white md:mt-4">
               {t("video_text")}
             </p>
             <div className="mt-4 md:mt-8">

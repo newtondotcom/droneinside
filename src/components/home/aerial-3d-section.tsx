@@ -46,21 +46,19 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
     >
       <div className="flex items-center mb-4">
         <div className="bg-primary/10 p-2 rounded-full mr-4">{icon}</div>
-        <h3 className="text-xl font-semibold">{title}</h3>
+        <h3 className="text-lg md:text-xl font-semibold">{title}</h3>
       </div>
-      <span className="flex text-neutral-600 dark:text-neutral-300 mb-4 prose min-h-[250px]">
+      <span className="hidden md:flex text-neutral-600 dark:text-neutral-300 mb-4 prose min-h-[250px]">
         <Markdown>{description}</Markdown>
       </span>
-      <div className="flex my-auto">
-        <div className="relative h-48 w-full rounded-lg overflow-hidden">
-          <Image
-            src={imageSrc || "/placeholder.svg"}
-            alt={title}
-            fill
-            sizes="full"
-            className="object-cover"
-          />
-        </div>
+      <div className="hidden md:flex my-auto relative md:h-48 w-full rounded-lg overflow-hidden">
+        <Image
+          src={imageSrc || "/placeholder.svg"}
+          alt={title}
+          fill
+          sizes="full"
+          className="object-cover"
+        />
       </div>
     </NeonGradientCard>
   </motion.div>

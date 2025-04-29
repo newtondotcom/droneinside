@@ -98,7 +98,7 @@ export default function Header() {
         initial="closed"
         animate={mobileMenuOpen ? "open" : "closed"}
         variants={mobileMenuVariants}
-        className="fixed top-16 left-0 w-full md:hidden flex flex-col gap-4 p-4 border-b bg-white shadow-md dark:bg-background dark:border-border bg-primary mt-4 items-center"
+        className="fixed top-16 left-0 w-full md:hidden flex flex-col gap-4 p-4 border-b bg-white shadow-md dark:bg-background dark:border-border pt-8 items-center z-40"
         aria-label="Mobile navigation"
       >
         {links.map(({ path, key }) => (

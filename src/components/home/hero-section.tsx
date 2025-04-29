@@ -1,24 +1,18 @@
 "use client";
-
-import TypingAnimation from "@/components/animations/typing-animation";
 import { ChevronsDown } from "lucide-react";
 import { motion } from "motion/react";
 import { useState, useEffect } from "react";
+import HandWrittenWord from "../kokonutui/hand-written-word";
 
 export default function HeroSection() {
-  const typingTexts = [
-    "Chez Droninside, nous faisons voler des drones en intérieur pour débloquer de nouvelles perspectives.",
-  ];
+  const sentence = "Chez DronInside, nous faisons voler des drones en ";
 
   const [onScreen, setOnScreen] = useState(false);
 
   useEffect(() => {
-    // Set onScreen to true after 12 seconds
     const timer = setTimeout(() => {
       setOnScreen(true);
-    }, 4200);
-
-    // Cleanup the timer on component unmount
+    }, 2000);
     return () => clearTimeout(timer);
   }, []);
 
@@ -41,18 +35,25 @@ export default function HeroSection() {
   return (
     <section
       id="hero"
-      className="h-screen w-full snap-start flex flex-col justify-center overflow-hidden bg-gradient-to-b from-background to-background/80"
+      className="h-screen w-full snap-start flex flex-col justify-center items-center overflow-hidden bg-gradient-to-b from-background to-background/80"
     >
-      <TypingAnimation
-        sentences={typingTexts}
-        typingSpeed={45}
-        delayBetweenSentences={50}
-      />
+          <motion.div
+            className="flex text-center max-w-4xl px-6"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5 }}
+          >
+              <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-primary/80 space-y-8 text-shadow-sm">
+              {sentence}
+              <HandWrittenWord word="intérieur" />
+              </h1>
+          </motion.div>
+
       <motion.div
         initial="offscreen"
         animate={onScreen ? "onscreen" : "offscreen"}
         variants={chevronsVariants}
-        className="w-full flex text-primary justify-center"
+        className="w-full flex text-primary/80 justify-center"
         aria-hidden="true"
       >
         <ChevronsDown size={300} />

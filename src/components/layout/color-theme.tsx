@@ -4,7 +4,6 @@ export default function ThemeToggle() {
   const [isDarkMode, setIsDarkMode] = useState(false);
 
   useEffect(() => {
-    // Check initial theme on component mount
     setIsDarkMode(document.documentElement.classList.contains("dark"));
   }, []);
 
@@ -15,18 +14,17 @@ export default function ThemeToggle() {
   };
 
   return (
-    <div className="hidden md:flex flex-col justify-center items-center">
+    <div className="flex flex-col justify-center items-center">
       <button
         onClick={toggleTheme}
-        className="relative cursor-pointer p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-ring"
+        className="relative cursor-pointer p-2 rounded-md flex justify-center items-center"
         aria-pressed={isDarkMode}
         aria-label={isDarkMode ? "Switch to light mode" : "Switch to dark mode"}
       >
         <svg
-          className="w-6 h-6 text-yellow-400 dark:hidden"
-          width="16"
-          height="16"
+          className="w-4 h-4 text-yellow-400 dark:hidden"
           xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 16 16"
           aria-hidden="true"
         >
           <path
@@ -39,10 +37,9 @@ export default function ThemeToggle() {
           />
         </svg>
         <svg
-          className="w-6 h-6 text-yellow-400 hidden dark:flex"
-          width="16"
-          height="16"
+          className="w-4 h-4 text-yellow-400 hidden dark:flex"
           xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 16 16"
           aria-hidden="true"
         >
           <path

@@ -8,14 +8,15 @@ import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import links from "@/lib/data/links";
-import translate from "@/lib/locales/function";
 import { motion } from "motion/react";
 import Logo from "@/components/ui/logo";
 import LocalePicker from "@/components/layout/locale-picker";
+import { useTranslations } from "next-intl";
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const pathname = usePathname();
+  const t = useTranslations("Navigation");
 
   const toggleMobileMenu = () => setMobileMenuOpen((prev) => !prev);
 
@@ -66,14 +67,14 @@ export default function Header() {
                 pathname === path && "text-primary font-semibold",
               )}
             >
-              {translate(key)}
+              {t(key)}
             </Link>
           ))}
         </nav>
 
         <div className="hidden md:flex items-center gap-4">
-        <ThemeToggle />
-        <LocalePicker />
+          <ThemeToggle />
+          <LocalePicker />
         </div>
 
         <Button
@@ -110,7 +111,7 @@ export default function Header() {
             )}
             onClick={toggleMobileMenu}
           >
-            {translate(key)}
+            {t(key)}
           </Link>
         ))}
       </motion.nav>

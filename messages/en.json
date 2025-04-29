@@ -1,5 +1,150 @@
 {
-    "HomePage": {
-      "title": "Hello world!"
-    }
+  "Common": {
+    "header_company_name": "DronInside",
+    "footer_company_name": "DronInside",
+    "footer_description": "Trust our little flying machines to get the best shots for your business 🚁",
+    "made_from": "Made with ❤️ in Paris 🥐",
+    "here_button": "here",
+    "cancel_button": "Cancel",
+    "send_button": "Send",
+    "contact_us_button": "Contact Us",
+    "page_not_found": "Page not found",
+    "not_found_desc": "Sorry, we couldn&apos;t find the page you&apos;re looking for.",
+    "return_home": "Return to home"
+  },
+  "Navigation": {
+    "home": "Home",
+    "services": "Services",
+    "portfolio": "Portfolio",
+    "faq": "FAQ",
+    "contact": "Contact"
+  },
+  "HomePage": {
+    "sentence": "DronInside makes small drones flying",
+    "inside": "indoor",
+    "video_description": "Single-take walkthrough videos that stand out.",
+    "video_text": "We fly small drones indoors creating seamless walkthrough videos for real estate, businesses, hotels, & more.",
+    "get_started": "Get Started Today",
+    "who_we_are": "Who are we?",
+    "company_description": " is a video production company based in the Parisian region. We specialize in drone video tours for real estate, businesses, hotels, offices, venues, and much more!",
+    "years_flying_drones": "5+ Years flying Drones",
+    "liability_insurance": "Professional Liability Insurance",
+    "video_montage": "Video Montage and Sound FX",
+    "showreel": "SHOWREEL",
+    "discover_services": "Discover the services we are offering by clicking "
+  },
+  "ServicesPage": {
+    "services_title": "We fly drones indoors to create seamless video tours",
+    "service_subtitle": "The premier virtual tour for commercial real estate, businesses, hotels, apartment leasing, & more",
+    "services_duration": "On site for",
+    "services_price": "Starting at",
+    "book_now": "Book now",
+    "services_redirect": "Interested in our services? Discover our previous work by clicking",
+    "residential_title": "Residential",
+    "residential_description": "Take advantage of a competitive edge to sell your residential listings faster!",
+    "local_business_title": "Local Business",
+    "local_business_description": "Highlight your business with a video for social media!",
+    "event_title": "Events",
+    "event_description": "Let us cover your event from a unique perspective!",
+    "office_title": "Office",
+    "office_description": "Promote your workspaces / coworking with a custom video!",
+    "hostel_title": "Hostel",
+    "hostel_description": "Showcase your hotel complex with an immersive video!",
+    "construction_title": "Construction",
+    "construction_description": "Capture and share the progress of your construction projects like never before!"
+  },
+  "ServiceDetailPage": {
+    "related_videos": "Related Videos",
+    "no_videos_title": "No Videos Available Yet",
+    "no_videos_message": "We don't have any videos for this service type yet. Contact us to be the first to showcase your property with our professional drone services!",
+    "request_service": "Request This Service",
+    "interested_in_service": "Interested in this service?"
+  },
+  "PortfolioPage": {
+    "title": "We fly drones indoors to create seamless video tours",
+    "subtitle": "The premier virtual tour for commercial real estate, businesses, hotels, apartment leasing, & more",
+    "redirect": "Any doubts or hesitations? You can check our FAQ by clicking"
+  },
+  "FAQPage": {
+    "faq_title": "Q&A",
+    "faq_subtitle": "Frequently Asked Questions",
+    "contact_redirect": "This doesn't answer your question? Feel free to contact us by clicking",
+    "q1_question": "What are the advantages of a drone tour compared to a regular video tour?",
+    "q1_answer": "Drone video tours, filmed entirely in one take, provide viewers with a much better understanding of a property's layout and size compared to standard videos. Additionally, we can capture camera angles that would otherwise be impossible.",
+    "q2_question": "What types of properties do you film?",
+    "q2_answer": "We film a wide range of properties, including residential real estate, small businesses, venues, and corporate office buildings. No project is too small or too large.",
+    "q3_question": "How long does it take to film?",
+    "q3_answer": "Residential drone tours typically take about 30 to 60 minutes to film.",
+    "q4_question": "What is the lead time to schedule my flight?",
+    "q4_answer": "You can usually schedule your commercial flight within 7 days, and your residential flight within 2 days.",
+    "q5_question": "How does a service proceed?",
+    "q5_answer": "During a service, the following steps are followed in order: the location is explored, an initial video capture trajectory is established according to your preferences, the first flight provides a preview of the video, additional flights are conducted until a satisfactory result is achieved. The drone has a flight autonomy of 40 minutes, distributed over 3 batteries, which is sufficient for multiple retakes if necessary.",
+    "q6_question": "What is the turnaround time for a drone tour?",
+    "q6_answer": "Most drone tour videos are delivered within 24 hours. Turnaround times for other drone tour videos are typically within 72 hours but may vary depending on the project.",
+    "q7_question": "What are the rates?",
+    "q7_answer": "Rates are determined based on the service duration, the number of places to film, and the complexity of the shots to be taken. For a personalized quote, please contact us. Indicative prices are available on the Services page.",
+    "q8_question": "Are there safety concerns when flying a drone indoors?",
+    "q8_answer": "We use drones that are specially designed and calibrated for slow indoor flight. They are equipped with ducts around the propellers, making them extremely safe for indoor use.",
+    "q9_question": "Where are we located?",
+    "q9_answer": "We can provide services in the Paris region or around Toulouse. For services outside these areas, please contact us. Travel expenses may apply."
+  },
+  "ContactPage": {
+    "contact_us": "Contact Us",
+    "contact_page_description": "Have a question or want to book a service? Fill out the form below and we'll get back to you as soon as possible.",
+    "form_submitted": "Your message has been successfully sent!",
+    "response_message": "We will get back to you as soon as possible.",
+    "send_another_message": "Send Another Message",
+    "full_name": "Full Name",
+    "full_name_placeholder": "John Doe",
+    "email": "Email",
+    "email_placeholder": "john.doe@example.com",
+    "phone_number": "Phone Number",
+    "phone_number_Placeholder": "+1234567890",
+    "project": "Your Project",
+    "project_placeholder": "Enter your message here",
+    "select_placeholder": "Select a service",
+    "form_error": "There was an error submitting the form. Please try again.",
+    "form_success": "Your message has been sent successfully!",
+    "fullNameMin": "Full name must be at least 2 characters",
+    "emailInvalid": "Please enter a valid email address",
+    "messageMin": "Message must be at least 10 characters"
+  },
+  "VideoSection": {
+    "video1_description": "A lively virtual tour of a seaside house. These lively videos can be created for private properties of any kind.",
+    "video2_description": "A house of over 200 square meters in the middle of the forest. Drone real estate tours provide a better sense of space compared to traditional tours.",
+    "video3_description": "Discover the beauty of the Southern France with this video."
+  },
+  "ServiceTypes": {
+    "residential": "Residential",
+    "local_business": "Local Business",
+    "office": "Office",
+    "hostel": "Hostel",
+    "construction": "Construction",
+    "industrial": "Industrial",
+    "threed": "3D models",
+    "aerial": "Aerial Photo",
+    "choose_service": "Choose a service"
+  },
+  "Aerial3DSection": {
+    "aerial_3d_title": "Beyond Indoor Flights: Aerial Photography & 3D Modeling",
+    "aerial_3d_subtitle": "We don't just fly indoors. Discover our complete range of drone services including stunning aerial photography and advanced 3D modeling solutions.",
+    "aerial_photography_title": "Aerial Photography",
+    "aerial_photography_description": "Capture breathtaking aerial views of your property or location with our professional outdoor drone services. Perfect for showcasing landscapes, buildings, and properties from unique perspectives that ground-based photography simply cannot achieve.",
+    "exterior_3d_title": "Exterior 3D Models",
+    "exterior_3d_description": "Using advanced photogrammetry techniques, we can create detailed 3D models of building exteriors, construction sites, and landscapes. These models provide accurate measurements, visualization capabilities, and can be embedded on your website for interactive viewing.",
+    "interior_3d_title": "Interior LIDAR Scanning",
+    "interior_3d_description": "Our cutting-edge LIDAR technology creates precise 3D models of interior spaces. These models can be used for virtual tours, accurate measurements, furniture placement planning, and renovation visualization. Perfect for real estate, architecture, and interior design.",
+    "learn_more_cta": "Learn More About Our 3D Services"
+  },
+  "RealEstateModal": {
+    "re_agent_cta": "Are you a real estate agent looking to showcase a property?",
+    "re_modal_title": "Stand out from the competition with",
+    "re_modal_highlight": "DronInside",
+    "re_feature_1_title": "Unique Perspectives",
+    "re_feature_1_desc": "Our drone tours provide seamless walkthroughs with unique angles and perspectives that traditional videos can't match, giving potential buyers a true sense of the property's flow and space.",
+    "re_feature_2_title": "Floor Plans with Automatic Calculations",
+    "re_feature_2_desc": "We create detailed floor plans with automatic area calculations, helping buyers understand the layout and dimensions of the property at a glance.",
+    "re_feature_3_title": "3D Models for Houses",
+    "re_feature_3_desc": "For houses, we can create interactive 3D models using photogrammetry, allowing potential buyers to explore the property from any angle, inside and out, before scheduling an in-person visit."
   }
+}

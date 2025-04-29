@@ -3,9 +3,10 @@ import { ChevronsDown } from "lucide-react";
 import { motion } from "motion/react";
 import { useState, useEffect } from "react";
 import HandWrittenWord from "../kokonutui/hand-written-word";
+import { useTranslations } from "next-intl";
 
 export default function HeroSection() {
-  const sentence = "Chez DronInside, nous faisons voler des drones en ";
+  const t = useTranslations("HomePage");
 
   const [onScreen, setOnScreen] = useState(false);
 
@@ -37,17 +38,17 @@ export default function HeroSection() {
       id="hero"
       className="h-screen w-full snap-start flex flex-col justify-center items-center overflow-hidden bg-gradient-to-b from-background to-background/80"
     >
-          <motion.div
-            className="flex text-center max-w-4xl px-6"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.5 }}
-          >
-              <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-primary/80 space-y-8 text-shadow-sm">
-              {sentence}
-              <HandWrittenWord word="intérieur" />
-              </h1>
-          </motion.div>
+      <motion.div
+        className="flex text-center max-w-4xl px-6 mt-20"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5 }}
+      >
+        <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-primary/80 space-y-8 text-shadow-sm">
+          {t("sentence")}
+          <HandWrittenWord word={t("inside")} />
+        </h1>
+      </motion.div>
 
       <motion.div
         initial="offscreen"

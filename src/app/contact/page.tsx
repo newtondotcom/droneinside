@@ -5,7 +5,6 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { motion, AnimatePresence } from "motion/react";
 import { submitContactForm } from "@/lib/actions/discord";
-import translate from "@/lib/locales/function";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import {
@@ -26,10 +25,15 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { CheckCircle2, Loader2 } from "lucide-react";
-import { ContactFormData, ContactFormSchema } from "@/lib/data/contact";
+import { type ContactFormData, ContactFormSchema } from "@/lib/data/contact";
 import Title from "@/components/layout/title";
+import { useTranslations } from "next-intl";
 
 export default function ContactPage() {
+  const t = useTranslations("ContactPage");
+  const tCommon = useTranslations("Common");
+  const tServiceTypes = useTranslations("ServiceTypes");
+
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formResponse, setFormResponse] = useState<{
     success?: boolean;
@@ -68,22 +72,19 @@ export default function ContactPage() {
   }
 
   const serviceTypes = [
-    { value: "residential", label: translate("residential") },
-    { value: "local_business", label: translate("local_business") },
-    { value: "office", label: translate("office") },
-    { value: "hostel", label: translate("hostel") },
-    { value: "construction", label: translate("construction") },
-    { value: "industrial", label: translate("industrial") },
-    { value: "threed", label: translate("threed") },
-    { value: "aerial", label: translate("aerial") },
+    { value: "residential", label: tServiceTypes("residential") },
+    { value: "local_business", label: tServiceTypes("local_business") },
+    { value: "office", label: tServiceTypes("office") },
+    { value: "hostel", label: tServiceTypes("hostel") },
+    { value: "construction", label: tServiceTypes("construction") },
+    { value: "industrial", label: tServiceTypes("industrial") },
+    { value: "threed", label: tServiceTypes("threed") },
+    { value: "aerial", label: tServiceTypes("aerial") },
   ];
 
   return (
     <div className="flex flex-col min-h-screen pt-20 items-center">
-    <Title
-      title={translate("contact_us")}
-      subtitle={translate("contact_page_description")}
-    />
+      <Title title={t("contact_us")} subtitle={t("contact_page_description")} />
       <div className="max-w-3xl w-full pt-8">
         <AnimatePresence mode="wait">
           {formResponse.success ? (
@@ -99,17 +100,17 @@ export default function ContactPage() {
                 <CheckCircle2 className="h-12 w-12 text-green-500" />
               </div>
               <h3 className="text-xl font-semibold text-green-800 dark:text-green-300 mb-2">
-                {translate("form_submitted")}
+                {t("form_submitted")}
               </h3>
               <p className="text-green-700 dark:text-green-400">
-                {formResponse.message || translate("response_message")}
+                {formResponse.message || t("response_message")}
               </p>
               <Button
                 variant="outline"
                 className="mt-6"
                 onClick={() => setFormResponse({})}
               >
-                {translate("send_another_message")}
+                {t("send_another_message")}
               </Button>
             </motion.div>
           ) : (
@@ -139,10 +140,10 @@ export default function ContactPage() {
                       name="fullName"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel>{translate("full_name")}</FormLabel>
+                          <FormLabel>{t("full_name")}</FormLabel>
                           <FormControl>
                             <Input
-                              placeholder={translate("full_name_placeholder")}
+                              placeholder={t("full_name_placeholder")}
                               {...field}
                             />
                           </FormControl>
@@ -156,11 +157,11 @@ export default function ContactPage() {
                       name="email"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel>{translate("email")}</FormLabel>
+                          <FormLabel>{t("email")}</FormLabel>
                           <FormControl>
                             <Input
                               type="email"
-                              placeholder={translate("email_placeholder")}
+                              placeholder={t("email_placeholder")}
                               {...field}
                             />
                           </FormControl>
@@ -176,12 +177,10 @@ export default function ContactPage() {
                       name="phoneNumber"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel>{translate("phone_number")}</FormLabel>
+                          <FormLabel>{t("phone_number")}</FormLabel>
                           <FormControl>
                             <Input
-                              placeholder={translate(
-                                "phone_number_Placeholder",
-                              )}
+                              placeholder={t("phone_number_Placeholder")}
                               {...field}
                             />
                           </FormControl>
@@ -195,7 +194,9 @@ export default function ContactPage() {
                       name="serviceType"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel>{translate("choose_service")}</FormLabel>
+                          <FormLabel>
+                            {tServiceTypes("choose_service")}
+                          </FormLabel>
                           <Select
                             onValueChange={field.onChange}
                             defaultValue={field.value}
@@ -203,7 +204,7 @@ export default function ContactPage() {
                             <FormControl>
                               <SelectTrigger>
                                 <SelectValue
-                                  placeholder={translate("select_placeholder")}
+                                  placeholder={t("select_placeholder")}
                                 />
                               </SelectTrigger>
                             </FormControl>
@@ -229,10 +230,10 @@ export default function ContactPage() {
                     name="message"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>{translate("project")}</FormLabel>
+                        <FormLabel>{t("project")}</FormLabel>
                         <FormControl>
                           <Textarea
-                            placeholder={translate("project_placeholder")}
+                            placeholder={t("project_placeholder")}
                             className="min-h-32"
                             {...field}
                           />
@@ -249,7 +250,7 @@ export default function ContactPage() {
                       onClick={() => form.reset()}
                       disabled={isSubmitting}
                     >
-                      {translate("cancel_button")}
+                      {tCommon("cancel_button") || "Cancel"}
                     </Button>
                     <Button
                       type="submit"
@@ -259,7 +260,7 @@ export default function ContactPage() {
                         isSubmitting && "text-transparent",
                       )}
                     >
-                      {translate("send_button")}
+                      {tCommon("send_button") || "Send"}
                       {isSubmitting && (
                         <div className="absolute inset-0 flex items-center justify-center">
                           <Loader2 className="h-5 w-5 animate-spin text-white" />

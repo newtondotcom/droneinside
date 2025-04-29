@@ -11,7 +11,6 @@ import { motion } from "motion/react";
 import { ChevronRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 import AnimatedGradientText from "@/components/ui/animated-gradient-text";
-import translate from "@/lib/locales/function";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import {
@@ -19,44 +18,48 @@ import {
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from "@/components/ui/tooltip"
+} from "@/components/ui/tooltip";
+import { useTranslations } from "next-intl";
 
 export function RealEstateModal() {
+  const t = useTranslations("RealEstateModal");
+  const tCommon = useTranslations("Common");
+
   const features = [
     {
       icon: "CameraIcon",
-      title: translate("re_feature_1_title"),
-      description: translate("re_feature_1_desc"),
+      title: t("re_feature_1_title"),
+      description: t("re_feature_1_desc"),
     },
     {
       icon: "FloorplanIcon",
-      title: translate("re_feature_2_title"),
-      description: translate("re_feature_2_desc"),
+      title: t("re_feature_2_title"),
+      description: t("re_feature_2_desc"),
     },
     {
       icon: "CubeIcon",
-      title: translate("re_feature_3_title"),
-      description: translate("re_feature_3_desc"),
+      title: t("re_feature_3_title"),
+      description: t("re_feature_3_desc"),
     },
   ];
 
   const images = [
     {
-      alt : "Vue intérieure",
-      source :  "/indoor.jpg",
-    },   
-     {
-      alt : "Vue extérieure",
-      source :  "/outdoor.jpg",
+      alt: "Vue intérieure",
+      source: "/indoor.jpg",
     },
     {
-      alt : "Modèle 3D",
-      source :  "/3d-recontruction.jpg",
+      alt: "Vue extérieure",
+      source: "/outdoor.jpg",
     },
     {
-      alt : "Photogrammétrie",
-      source :  "/photogrammetry.jpg",
-    }
+      alt: "Modèle 3D",
+      source: "/3d-recontruction.jpg",
+    },
+    {
+      alt: "Photogrammétrie",
+      source: "/photogrammetry.jpg",
+    },
   ];
 
   return (
@@ -79,7 +82,7 @@ export function RealEstateModal() {
             />
             🏠 <hr className="mx-2 h-4 w-px shrink-0 bg-neutral-500" />
             <AnimatedGradientText className="text-sm font-semibold">
-              {translate("re_agent_cta")}
+              {t("re_agent_cta")}
             </AnimatedGradientText>
             <ChevronRight className="ml-1 size-4 stroke-neutral-500 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5" />
           </div>
@@ -87,13 +90,12 @@ export function RealEstateModal() {
         <ModalBody>
           <ModalContent>
             <h4 className="text-lg md:text-2xl text-neutral-600 dark:text-neutral-100 font-bold text-center mb-8">
-              {translate("re_modal_title")}{" "}
+              {t("re_modal_title")}{" "}
               <span className="px-1 py-0.5 rounded-md bg-gray-100 dark:bg-neutral-800 dark:border-neutral-700 border border-gray-200">
-                {translate("re_modal_highlight")}
+                {t("re_modal_highlight")}
               </span>
             </h4>
             <div className="flex justify-center items-center">
-              
               {images.map((image, idx) => (
                 <motion.div
                   key={"images" + idx}
@@ -112,22 +114,22 @@ export function RealEstateModal() {
                   }}
                   className="rounded-xl -mr-4 mt-4 p-1 bg-white dark:bg-neutral-800 dark:border-neutral-700 border border-neutral-100 shrink-0 overflow-hidden"
                 >
-                <TooltipProvider>
-                  <Tooltip>
-                    <TooltipTrigger asChild>
-                  <Image
-                    src={image.source}
-                    alt={image.alt}
-                    width="500"
-                    height="500"
-                    className="rounded-lg h-20 w-20 md:h-40 md:w-40 object-cover shrink-0"
-                  />
-                  </TooltipTrigger>
-                  <TooltipContent>
-            <p>{image.alt}</p>
-          </TooltipContent>
-        </Tooltip>
-      </TooltipProvider>
+                  <TooltipProvider>
+                    <Tooltip>
+                      <TooltipTrigger asChild>
+                        <Image
+                          src={image.source || "/placeholder.svg"}
+                          alt={image.alt}
+                          width="500"
+                          height="500"
+                          className="rounded-lg h-20 w-20 md:h-40 md:w-40 object-cover shrink-0"
+                        />
+                      </TooltipTrigger>
+                      <TooltipContent>
+                        <p>{image.alt}</p>
+                      </TooltipContent>
+                    </Tooltip>
+                  </TooltipProvider>
                 </motion.div>
               ))}
             </div>
@@ -149,11 +151,11 @@ export function RealEstateModal() {
           </ModalContent>
           <ModalFooter className="gap-4">
             <Button className="px-2 py-1" variant={"outline"}>
-              {translate("cancel_button")}
+              {tCommon("cancel_button")}
             </Button>
             <Link href="/contact">
               <Button className="px-2 py-1">
-                {translate("contact_us_button")}
+                {tCommon("contact_us_button")}
               </Button>
             </Link>
           </ModalFooter>

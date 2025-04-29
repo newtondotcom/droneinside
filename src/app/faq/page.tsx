@@ -6,10 +6,13 @@ import {
   AccordionTrigger,
   AccordionContent,
 } from "@/components/ui/accordion";
-import translate from "@/lib/locales/function";
 import { useEffect, useState } from "react";
+import { useTranslations } from "next-intl";
 
 export default function FAQ() {
+  const t = useTranslations("FAQPage");
+  const tCommon = useTranslations("Common");
+
   const [faqList, setFaqList] = useState([
     {
       question: "",
@@ -26,20 +29,17 @@ export default function FAQ() {
       const answerKey = `q${i}_answer`;
 
       faqItems.push({
-        question: translate(questionKey),
-        answer: translate(answerKey),
+        question: t(questionKey),
+        answer: t(answerKey),
       });
     }
 
     setFaqList(faqItems);
-  }, []);
+  }, [t]);
 
   return (
-    <div className="mx-auto min-h-screen max-w-screen-xl px-5  mt-20">
-      <Title
-        title={translate("faq_title")}
-        subtitle={translate("faq_subtitle")}
-      />
+    <div className="mx-auto min-h-screen max-w-screen-xl px-5 mt-20">
+      <Title title={t("faq_title")} subtitle={t("faq_subtitle")} />
       <Accordion
         type="single"
         collapsible
@@ -55,13 +55,12 @@ export default function FAQ() {
         ))}
       </Accordion>
 
-                    <div className="mx-auto my-8 max-w-lg text-center text-base font-semibold text-neutral-700 dark:text-neutral-200">
-                      {translate("contact_redirect")}{" "}
-                      <a href="/contact" className="text-primary underline">
-                        {translate("here_button")}
-                      </a>
-                    </div>
-
+      <div className="mx-auto my-8 max-w-lg text-center text-base font-semibold text-neutral-700 dark:text-neutral-200">
+        {t("contact_redirect")}{" "}
+        <a href="/contact" className="text-primary underline">
+          {tCommon("here_button")}
+        </a>
+      </div>
     </div>
   );
 }

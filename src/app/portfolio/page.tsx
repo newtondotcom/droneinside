@@ -1,15 +1,19 @@
 "use client";
 import HeroVideoDialog from "@/components/magicui/hero-video-dialog";
 import Title from "@/components/layout/title";
-import translate from "@/lib/locales/function";
 import videos from "@/lib/data/videos";
+import { useTranslations } from "next-intl";
 
 export default function Portfolio() {
+  const t = useTranslations("PortfolioPage");
+  const tCommon = useTranslations("Common");
+  const tVideo = useTranslations("VideoSection");
+
   return (
     <div className="flex flex-col mt-20">
       <Title
-        title={translate("services_title")}
-        subtitle={translate("service_subtitle")}
+        title={t("title") || "Portfolio"}
+        subtitle={t("subtitle") || "Our previous work"}
       />
       <div className="grid grid-cols-1 gap-2 px-4 md:grid-cols-2 md:px-24 lg:grid-cols-4">
         {videos.map((video) => (
@@ -31,18 +35,18 @@ export default function Portfolio() {
               />
             </div>
             <h2 className="text-center text-sm font-semibold text-neutral-700 mt-4">
-              {translate(video.descriptionKey)}
+              {tVideo(video.descriptionKey)}
             </h2>
           </div>
         ))}
       </div>
 
-                    <div className="mx-auto my-8 max-w-lg text-center text-base font-semibold text-neutral-700 dark:text-neutral-200">
-                      {translate("portfolio_redirect")}{" "}
-                      <a href="/faq" className="text-primary underline">
-                        {translate("here_button")}
-                      </a>
-                    </div>
+      <div className="mx-auto my-8 max-w-lg text-center text-base font-semibold text-neutral-700 dark:text-neutral-200">
+        {t("redirect")}{" "}
+        <a href="/faq" className="text-primary underline">
+          {tCommon("here_button")}
+        </a>
+      </div>
     </div>
   );
 }

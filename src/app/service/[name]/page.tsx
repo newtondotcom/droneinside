@@ -2,7 +2,6 @@
 
 import { redirect } from "next/navigation";
 import { useState, useEffect } from "react";
-import translate from "@/lib/locales/function";
 import videos from "@/lib/data/videos";
 import type { Video as VideoType } from "@/lib/data/videos";
 import { cn } from "@/lib/utils";
@@ -12,11 +11,17 @@ import { Button } from "@/components/ui/button";
 import { motion } from "motion/react";
 import { Play, Video } from "lucide-react";
 import { ServiceType } from "@/lib/data/services";
-import { usePathname  } from "next/navigation";
+import { usePathname } from "next/navigation";
+import { useTranslations } from "next-intl";
 
 export default function ServicePage() {
   const pathname = usePathname();
   const serviceName = pathname.split("/").pop() as ServiceType;
+
+  const tServiceDetail = useTranslations("ServiceDetailPage");
+  const tServices = useTranslations("ServicesPage");
+  const tVideo = useTranslations("VideoSection");
+  const tCommon = useTranslations("Common");
 
   // Validate service type
   if (!Object.values(ServiceType).includes(serviceName)) {
@@ -24,8 +29,8 @@ export default function ServicePage() {
   }
 
   const [relatedVideos, setRelatedVideos] = useState<VideoType[]>([]);
-  const serviceTitle = translate(`${serviceName}_title`) || serviceName;
-  const serviceDescription = translate(`${serviceName}_description`) || "";
+  const serviceTitle = tServices(`${serviceName}_title`) || serviceName;
+  const serviceDescription = tServices(`${serviceName}_description`) || "";
 
   useEffect(() => {
     const filteredVideos = videos.filter(
@@ -45,25 +50,30 @@ export default function ServicePage() {
 
       <div className="mb-8">
         <h2 className="text-2xl font-semibold mb-6">
-          {translate("related_videos")}
+          {tServiceDetail("related_videos")}
         </h2>
 
         {relatedVideos.length > 0 ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {relatedVideos.map((video) => (
-              <VideoCard key={video.id} video={video} />
+              <VideoCard key={video.id} video={video} tVideo={tVideo} />
             ))}
           </div>
         ) : (
-          <NoVideosPlaceholder serviceTitle={serviceTitle} />
+          <NoVideosPlaceholder
+            serviceTitle={serviceTitle}
+            tServiceDetail={tServiceDetail}
+          />
         )}
       </div>
 
       <div className="mt-12 text-center">
-        <p className="text-lg mb-6">{translate("interested_in_service")}</p>
+        <p className="text-lg mb-6">
+          {tServiceDetail("interested_in_service")}
+        </p>
         <Link href="/contact">
           <Button className="font-semibold text-lg py-4 px-6">
-            {translate("contact_us")}
+            {tCommon("contact_us_button")}
           </Button>
         </Link>
       </div>
@@ -73,9 +83,10 @@ export default function ServicePage() {
 
 interface VideoCardProps {
   video: VideoType;
+  tVideo: any;
 }
 
-function VideoCard({ video }: VideoCardProps) {
+function VideoCard({ video, tVideo }: VideoCardProps) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -86,12 +97,16 @@ function VideoCard({ video }: VideoCardProps) {
       <div className="relative h-48 w-full">
         <Image
           src={`https://img.youtube.com/vi/${video.id}/maxresdefault.jpg`}
-          alt={translate(video.descriptionKey)}
+          alt={tVideo(video.descriptionKey)}
           fill
           className="object-cover"
         />
         <div className="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
-          <Link href={video.id} target="_blank" rel="noopener noreferrer">
+          <Link
+            href={`https://www.youtube.com/watch?v=${video.id}`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <Button
               variant="outline"
               size="icon"
@@ -104,7 +119,7 @@ function VideoCard({ video }: VideoCardProps) {
       </div>
       <div className="p-4">
         <h3 className="font-semibold text-lg mb-2">
-          {translate(video.descriptionKey)}
+          {tVideo(video.descriptionKey)}
         </h3>
       </div>
     </motion.div>
@@ -113,9 +128,13 @@ function VideoCard({ video }: VideoCardProps) {
 
 interface NoVideosPlaceholderProps {
   serviceTitle: string;
+  tServiceDetail: any;
 }
 
-function NoVideosPlaceholder({ serviceTitle }: NoVideosPlaceholderProps) {
+function NoVideosPlaceholder({
+  serviceTitle,
+  tServiceDetail,
+}: NoVideosPlaceholderProps) {
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -130,13 +149,13 @@ function NoVideosPlaceholder({ serviceTitle }: NoVideosPlaceholderProps) {
         <Video className="h-8 w-8 text-neutral-500 dark:text-neutral-400" />
       </div>
       <h3 className="text-xl font-medium mb-2">
-        {translate("no_videos_title")}
+        {tServiceDetail("no_videos_title")}
       </h3>
       <p className="text-neutral-600 dark:text-neutral-400 mb-6">
-        {translate("no_videos_message", { service: serviceTitle })}
+        {tServiceDetail("no_videos_message")}
       </p>
       <Link href="/contact">
-        <Button variant="outline">{translate("request_service")}</Button>
+        <Button variant="outline">{tServiceDetail("request_service")}</Button>
       </Link>
     </motion.div>
   );

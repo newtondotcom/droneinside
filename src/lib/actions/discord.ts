@@ -1,11 +1,10 @@
 "use server";
 import { z } from "zod";
 import {
-  ContactFormData,
+  type ContactFormData,
   ContactFormSchema,
-  SubmitResponse,
+  type SubmitResponse,
 } from "@/lib/data/contact";
-import translate from "../locales/function";
 
 // Discord webhook URL
 const DISCORD_WEBHOOK_URL = process.env.DISCORD_WEBHOOK;
@@ -22,7 +21,7 @@ export async function submitContactForm(
       console.warn("Discord webhook URL not set. Message not sent.");
       return {
         success: false,
-        message: translate("form_error"),
+        message: "Discord webhook URL not set. Message not sent.",
       };
     }
 
@@ -78,7 +77,7 @@ export async function submitContactForm(
 
     return {
       success: true,
-      message: translate("form_success"),
+      message: "Your message has been sent successfully!",
     };
   } catch (error) {
     console.error("Error submitting contact form:", error);

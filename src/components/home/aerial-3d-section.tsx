@@ -1,13 +1,15 @@
 "use client";
 
-import { motion, HTMLMotionProps} from "motion/react";
+import type React from "react";
+
+import { motion, type HTMLMotionProps } from "motion/react";
 import { LandPlot, Mountain, Camera, ChevronRight } from "lucide-react";
-import translate from "@/lib/locales/function";
 import Image from "next/image";
 import Link from "next/link";
 import Markdown from "react-markdown";
 import { NeonGradientCard } from "@/components/magicui/neon-gradient-card";
 import { Button } from "@/components/ui/button";
+import { useTranslations } from "next-intl";
 
 type ServiceCardProps = {
   icon: React.ReactNode;
@@ -52,7 +54,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
       <div className="flex my-auto">
         <div className="relative h-48 w-full rounded-lg overflow-hidden">
           <Image
-            src={imageSrc}
+            src={imageSrc || "/placeholder.svg"}
             alt={title}
             fill
             sizes="full"
@@ -65,11 +67,13 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
 );
 
 export default function Aerial3DSection() {
+  const t = useTranslations("Aerial3DSection");
+
   const services: ServiceCardProps[] = [
     {
       icon: <Camera className="h-8 w-8 text-primary" />,
-      title: translate("aerial_photography_title"),
-      description: translate("aerial_photography_description"),
+      title: t("aerial_photography_title"),
+      description: t("aerial_photography_description"),
       imageSrc: "/aerial-view.jpg",
       animation: {
         initial: { opacity: 0, x: -50 },
@@ -79,8 +83,8 @@ export default function Aerial3DSection() {
     },
     {
       icon: <Mountain className="h-8 w-8 text-primary" />,
-      title: translate("exterior_3d_title"),
-      description: translate("exterior_3d_description"),
+      title: t("exterior_3d_title"),
+      description: t("exterior_3d_description"),
       imageSrc: "/photogrammetry.jpg",
       animation: {
         initial: { opacity: 0, y: 50 },
@@ -90,8 +94,8 @@ export default function Aerial3DSection() {
     },
     {
       icon: <LandPlot className="h-8 w-8 text-primary" />,
-      title: translate("interior_3d_title"),
-      description: translate("interior_3d_description"),
+      title: t("interior_3d_title"),
+      description: t("interior_3d_description"),
       imageSrc: "/floor-plan.png",
       animation: {
         initial: { opacity: 0, x: 50 },
@@ -115,10 +119,10 @@ export default function Aerial3DSection() {
           className="text-center mb-12"
         >
           <h2 className="text-3xl md:text-5xl font-bold text-primary mb-4">
-            {translate("aerial_3d_title")}
+            {t("aerial_3d_title")}
           </h2>
           <p className="text-lg text-neutral-600 dark:text-neutral-300 max-w-3xl mx-auto">
-            {translate("aerial_3d_subtitle")}
+            {t("aerial_3d_subtitle")}
           </p>
         </motion.div>
 
@@ -136,8 +140,8 @@ export default function Aerial3DSection() {
           className="mt-12 text-center"
         >
           <Link href="/contact">
-            <Button  className="font-semibold text-lg py-4 px-6">
-              {translate("learn_more_cta")}
+            <Button className="font-semibold text-lg py-4 px-6">
+              {t("learn_more_cta")}
               <ChevronRight />
             </Button>
           </Link>

@@ -2,11 +2,13 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import translate from "@/lib/locales/function";
 import { RealEstateModal } from "@/components/ui/real-estate-modal";
 import { Button } from "@/components/ui/button";
+import { useTranslations } from "next-intl";
 
 export default function ServicesSection() {
+  const t = useTranslations("HomePage");
+
   return (
     <section
       id="services"
@@ -34,14 +36,16 @@ export default function ServicesSection() {
         <div className="my-auto flex h-full w-full flex-col justify-center px-10 py-8 align-middle md:w-1/2 md:py-0">
           <div className="mx-auto max-w-xl text-center">
             <h2 className="text-2xl font-bold text-black dark:text-white md:text-3xl">
-              {translate("video_description")}
+              {t("video_description")}
             </h2>
             <p className="hidden text-black dark:text-white md:mt-4 md:block">
-              {translate("video_text")}
+              {t("video_text")}
             </p>
             <div className="mt-4 md:mt-8">
               <Link href={"/contact"}>
-                <Button  className="font-semibold text-lg py-4 px-6">{translate("get_started")}</Button>
+                <Button className="font-semibold text-lg py-4 px-6">
+                  {t("get_started")}
+                </Button>
               </Link>
             </div>
 

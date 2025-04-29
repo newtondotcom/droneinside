@@ -1,13 +1,12 @@
 import { z } from "zod";
-import translate from "@/lib/locales/function";
 
 // Define the schema for contact form validation
 export const ContactFormSchema = z.object({
-  fullName: z.string().min(2, { message: translate("fullNameMin") }),
-  email: z.string().email({ message: translate("emailInvalid") }),
+  fullName: z.string().min(2),
+  email: z.string().email(),
   phoneNumber: z.string().optional(),
   serviceType: z.string().optional(),
-  message: z.string().min(10, { message: translate("messageMin") }),
+  message: z.string().min(10),
 });
 
 // Type for the form data

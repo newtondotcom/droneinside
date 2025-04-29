@@ -8,7 +8,6 @@ import { useTranslations } from "next-intl";
 const Services = () => {
   const t = useTranslations("ServicesPage");
   const tCommon = useTranslations("Common");
-  const tServiceTypes = useTranslations("ServiceTypes");
 
   return (
     <div className="flex flex-col mt-20">

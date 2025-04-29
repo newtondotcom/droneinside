@@ -131,10 +131,7 @@ interface NoVideosPlaceholderProps {
   tServiceDetail: any;
 }
 
-function NoVideosPlaceholder({
-  serviceTitle,
-  tServiceDetail,
-}: NoVideosPlaceholderProps) {
+function NoVideosPlaceholder({ tServiceDetail }: NoVideosPlaceholderProps) {
   return (
     <motion.div
       initial={{ opacity: 0 }}

@@ -14,8 +14,6 @@
 
 ## Make sure dark/white theme are operationnal
 
-## Use simpleicons.org for footer icons, add link for BluSky also
-
 ## Utiliser le composant Title dans la section aerial-3d.
 
 ## Créer la page type d'une annonce immobilière

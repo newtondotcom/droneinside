@@ -6,7 +6,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Logo from "@/components/ui/logo";
 import { Separator } from "@/components/ui/separator";
-import { siGithub, siInstagram} from 'simple-icons';
+import { siGithub, siInstagram, siBluesky} from 'simple-icons';
 
 const Footer = () => {
   const pathname = usePathname();
@@ -29,6 +29,11 @@ const Footer = () => {
       href: "https://github.com/newtondotcom/droninside",
       label: "GitHub",
       icon: <Github />,
+    },
+    {
+      href: "https://bsky.app/profile/droninside.bsky.social",
+      label: "Blueksy",
+      icon: <Bluesky />,
     },
   ];
 
@@ -115,6 +120,13 @@ function Github(){
 
 function Instagram(){
   const path = siInstagram.path;
+  return (
+      <path d={path} />
+  )
+}
+
+function Bluesky(){
+  const path = siBluesky.path;
   return (
       <path d={path} />
   )

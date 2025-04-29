@@ -6,7 +6,29 @@
 
 ## Use motion to animate sections contents on appearing, be creative with shaking, translattion along x and y axis.
 
-## Feel free to improve my translation system, by changing the structure of the files containing the translations for example, organizing them per page
+## Populate the translations system 
+
+The old translations are stored in a old file located in `droninside/src/lib/locales/trad.ts`
+
+I want you to splitg them following a page based logic like this: 
+
+```json
+{
+    "HomePage": {
+      "title": "Hello world!"
+    }
+}
+```
+
+You can use the translations using this : 
+```tsx
+import {useTranslations} from 'next-intl';
+ 
+export default function HomePage() {
+  const t = useTranslations('HomePage');
+  return <h1>{t('title')}</h1>;
+}
+```
 
 ## Tweak a bit my catch phrases to make them attractives for customers.
 

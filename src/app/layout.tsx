@@ -7,6 +7,8 @@ import type React from "react";
 import { cn } from "@/lib/utils";
 import { ThemeProvider } from "@/components/providers/theme-provider";
 import { Analytics } from "@vercel/analytics/react";
+import {NextIntlClientProvider} from 'next-intl';
+import {getLocale} from 'next-intl/server';
 
 export const metadata: Metadata = {
   title: "DronInside",
@@ -74,18 +76,16 @@ export const metadata: Metadata = {
 
 interface RootLayoutProps {
   children: React.ReactNode;
-  params: {
-    locale: string;
-  };
 }
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
-  params: { locale },
 }: RootLayoutProps) {
+  const locale = await getLocale();
   return (
     <html lang={locale} suppressHydrationWarning>
       <body className={cn("h-dvh bg-background font-sans antialiased")}>
+      <NextIntlClientProvider>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <div className="relative flex min-h-screen flex-col">
             <Header />
@@ -93,6 +93,7 @@ export default function RootLayout({
             <Footer />
           </div>
         </ThemeProvider>
+        </NextIntlClientProvider>
         <Analytics />
       </body>
     </html>

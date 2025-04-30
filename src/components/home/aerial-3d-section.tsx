@@ -3,7 +3,7 @@
 import type React from "react";
 
 import { motion, type HTMLMotionProps } from "motion/react";
-import { LandPlot, Mountain, Camera, ChevronRight } from "lucide-react";
+import { LandPlot, Mountain, Camera} from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import Markdown from "react-markdown";

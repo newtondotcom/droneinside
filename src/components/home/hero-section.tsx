@@ -19,14 +19,14 @@ export default function HeroSection() {
 
   const droneVariants = {
     offscreen: {
-      y: -100, // Start above the screen
+      x: -500,
       opacity: 0,
-      rotate: -360, // Start with a full rotation
+      rotate: -360,
     },
     onscreen: {
-      y: 0, // Move to the original position
+      x: 0,
       opacity: 1,
-      rotate: 0, // Stop rotation
+      rotate: 0,
       transition: {
         type: "spring",
         bounce: 0.6,

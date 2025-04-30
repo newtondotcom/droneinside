@@ -1,9 +1,9 @@
 "use client";
-import { ChevronsDown } from "lucide-react";
 import { motion } from "motion/react";
 import { useState, useEffect } from "react";
-import HandWrittenWord from "../kokonutui/hand-written-word";
+import HandWrittenWord from "@/components/kokonutui/hand-written-word";
 import { useTranslations } from "next-intl";
+import Drone from "@/components/layout/drone";
 
 export default function HeroSection() {
   const t = useTranslations("HomePage");
@@ -17,14 +17,16 @@ export default function HeroSection() {
     return () => clearTimeout(timer);
   }, []);
 
-  const chevronsVariants = {
+  const droneVariants = {
     offscreen: {
       y: -100, // Start above the screen
       opacity: 0,
+      rotate: -360, // Start with a full rotation
     },
     onscreen: {
       y: 0, // Move to the original position
       opacity: 1,
+      rotate: 0, // Stop rotation
       transition: {
         type: "spring",
         bounce: 0.6,
@@ -53,11 +55,11 @@ export default function HeroSection() {
       <motion.div
         initial="offscreen"
         animate={onScreen ? "onscreen" : "offscreen"}
-        variants={chevronsVariants}
+        variants={droneVariants}
         className="w-full flex text-primary/80 justify-center"
         aria-hidden="true"
       >
-        <ChevronsDown size={300} />
+        <Drone />
       </motion.div>
     </section>
   );
